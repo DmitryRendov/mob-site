@@ -1,0 +1,33 @@
+{
+  "name": "minecraft.of.by",
+  "version": "0.0.1",
+  "description": "minecraft.of.by project",
+  "authors": [
+    "Dmitry Vl. Rendov"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "libraries",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "latest",
+    "bootstrap": "latest",
+    "font-awesome": "latest",
+    "modernizr": "latest",
+    "html5shiv": "latest",
+    "respond": "latest",
+    "SyntaxHighlighter": "latest",
+    "matchHeight": "~0.5.2"
+  },
+  "homepage": "https://github.com/DmitryRendov/mob",
+  "moduleType": [
+    "globals",
+    "node"
+  ]
+}

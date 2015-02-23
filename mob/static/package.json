@@ -1,0 +1,33 @@
+{
+  "name": "minecraft-of-by",
+  "version": "0.0.1",
+  "description": "Theme for minecraft.of.by project",
+  "main": "package.json",
+  "scripts": {
+    "test": "grunt test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/DmitryRendov/mob.git"
+  },
+  "author": "Dmitry Vl. Rendov",
+  "license": {
+    "type": "MIT",
+    "url": "https://github.com/DmitryRendov/mob/blob/master/LICENSE"
+  },
+  "bugs": {
+    "url": "https://github.com/DmitryRendov/mob/issues"
+  },
+  "homepage": "http://minecraft.of.by/",
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-contrib-clean": "^0.6.0",
+    "grunt-contrib-concat": "^0.5.0",
+    "grunt-contrib-copy": "^0.6.0",
+    "grunt-contrib-jshint": "^0.10.0",
+    "grunt-contrib-less": "^0.11.4",
+    "grunt-contrib-uglify": "^0.6.0",
+    "grunt-contrib-watch": "^0.6.1",
+    "grunt-modernizr": "^0.6.0"
+  }
+}
