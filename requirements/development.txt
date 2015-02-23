@@ -1,4 +1,6 @@
 # Local development dependencies go here
 -r base.txt
 
+django-allauth
 django-debug-toolbar
+
