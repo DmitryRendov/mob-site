@@ -1,6 +1,12 @@
 # Local development dependencies go here
 -r base.txt
 
-django-allauth
 django-debug-toolbar
+
+html5lib==0.999
+six==1.3.0
+django-treebeard==3.0
+
+# Optional, recommended packages
+Pillow>=2
 

@@ -1,0 +1,11 @@
+{% load tags %}
+
+{% url 'home_url_name' as home %}
+{% url 'services_url_name' as services %}
+{% url 'contact_url_name' as contact %}
+
+<div id="navigation">
+    <a class="{% active request home %}" href="{{ home }}">Home</a>
+    <a class="{% active request services %}" href="{{ services }}">Services</a>
+    <a class="{% active request contact %}" href="{{ contact }}">Contact</a>
+</div>

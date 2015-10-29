@@ -1,0 +1,160 @@
+{% extends "base.html" %}
+
+{% block title %}Регистрания нового игрока{% endblock %}
+
+{% block base_content %}
+<div id="login-overlay" class="modal-dialog">
+    <div class="modal-content">
+        <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span
+                    class="sr-only">Закрыть</span></button>
+            <h2 class="modal-title" id="myModalLabel">Регистрация на сайте</h2>
+        </div>
+        <div class="modal-body">
+            <div class="row">
+                <div class="col-sm-10 col-sm-offset-1 col-sm-offset-1">
+                    <form role="form" action="" method="post">
+                        {% csrf_token %}
+                        <div class="form-group">
+                            {{ form.non_field_errors }}
+                        </div>
+
+                        <div class="row">
+                            <div class="col-xs-12 col-sm-6 col-md-6">
+                                <div class="form-group">
+                                    <input type="text" name="username" id="id_username"
+                                           class="form-control" placeholder="Ник" tabindex="1" value="{% if form.username.value != None %}{{ form.username.value }}{% endif %}">
+                                    {% if form.username.errors %}
+                                    <div class="alert alert-warning alert-dismissible" role="alert">
+                                        <button type="button" class="close fade in" data-dismiss="alert"
+                                                aria-label="Закрыть"><span aria-hidden="true">&times;</span>
+                                        </button>
+                                        {% for error in form.username.errors %}
+                                        {{ error|escape }}
+                                        {% endfor %}
+                                    </div>
+                                    {% endif %}
+                                </div>
+                            </div>
+                            <div class="col-xs-12 col-sm-6 col-md-6">
+                                <div class="form-group">
+                                    <input type="text" name="email" id="id_email"
+                                           class="form-control" placeholder="E-mail" tabindex="2" value="{% if form.email.value != None %}{{ form.email.value }}{% endif %}">
+                                    {% if form.email.errors %}
+                                    <div class="alert alert-warning alert-dismissible" role="alert">
+                                        <button type="button" class="close fade in" data-dismiss="alert"
+                                                aria-label="Закрыть"><span aria-hidden="true">&times;</span>
+                                        </button>
+                                        {% for error in form.email.errors %}
+                                        {{ error|escape }}
+                                        {% endfor %}
+                                    </div>
+                                    {% endif %}
+                                </div>
+                            </div>
+                        </div>
+                         <div class="row">
+                            <div class="col-xs-12 col-sm-6 col-md-6">
+                                <div class="form-group">
+                                    <input type="password" name="password1" id="id_password1"
+                                           class="form-control" placeholder="Пароль"
+                                           value="{{ form.field.password1 }}" tabindex="3">
+                                </div>
+                            </div>
+                            <div class="col-xs-12 col-sm-6 col-md-6">
+                                <div class="form-group">
+                                    <input type="password" name="password2" id="id_password2"
+                                           class="form-control" placeholder="Повторите пароль"
+                                           value="{{ form.field.password1 }}" tabindex="4">
+                                </div>
+                            </div>
+                            {% if form.password1.errors or form.password2.errors %}
+                            <div class="col-xs-12 col-sm-12 col-md-12">
+                                <div class="alert alert-warning alert-dismissible" role="alert">
+                                    <button type="button" class="close fade in" data-dismiss="alert"
+                                            aria-label="Закрыть"><span aria-hidden="true">&times;</span></button>
+                                    {% for error in form.password2.errors %}
+                                    {{ error|escape }}
+                                    {% endfor %}
+                                </div>
+                            </div>
+                            {% endif %}
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-4 col-sm-3 col-md-3">
+                                <span class="button-checkbox">
+                                    <button type="button" class="btn" data-color="info" tabindex="5"> Принимаю</button>
+                                    <input type="checkbox" name="t_and_c" id="t_and_c" class="hidden" value="1">
+                                </span>
+                            </div>
+                            <div class="col-xs-8 col-sm-9 col-md-9">
+                                Нажимая кнопку <strong class="label label-success">Регистрация</strong>, вы
+                                соглашаетесь с <a href="#" data-toggle="modal" data-target="#t_and_c_m">Условиями использования</a> нашего сервиса.
+                            </div>
+                        </div>
+
+                        <hr class="colorgraph">
+                        <div class="row">
+                            <div class="col-xs-12 col-md-6"><input type="submit" value="Зарегистрироваться"
+                                                                   class="btn btn-success btn-block"
+                                                                   tabindex="6"></div>
+                            <div class="col-xs-12 col-md-6"><a href="/auth/login/"
+                                                               class="btn btn-info btn-block">Авторизоваться</a>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Modal -->
+<div class="modal fade" id="t_and_c_m" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+     aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                <h4 class="modal-title" id="myModalLabel">Terms & Conditions</h4>
+            </div>
+            <div class="modal-body">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique, itaque, modi, aliquam
+                    nostrum at sapiente consequuntur natus odio reiciendis perferendis rem nisi tempore possimus
+                    ipsa porro delectus quidem dolorem ad.</p>
+
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique, itaque, modi, aliquam
+                    nostrum at sapiente consequuntur natus odio reiciendis perferendis rem nisi tempore possimus
+                    ipsa porro delectus quidem dolorem ad.</p>
+
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique, itaque, modi, aliquam
+                    nostrum at sapiente consequuntur natus odio reiciendis perferendis rem nisi tempore possimus
+                    ipsa porro delectus quidem dolorem ad.</p>
+
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique, itaque, modi, aliquam
+                    nostrum at sapiente consequuntur natus odio reiciendis perferendis rem nisi tempore possimus
+                    ipsa porro delectus quidem dolorem ad.</p>
+
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique, itaque, modi, aliquam
+                    nostrum at sapiente consequuntur natus odio reiciendis perferendis rem nisi tempore possimus
+                    ipsa porro delectus quidem dolorem ad.</p>
+
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique, itaque, modi, aliquam
+                    nostrum at sapiente consequuntur natus odio reiciendis perferendis rem nisi tempore possimus
+                    ipsa porro delectus quidem dolorem ad.</p>
+
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique, itaque, modi, aliquam
+                    nostrum at sapiente consequuntur natus odio reiciendis perferendis rem nisi tempore possimus
+                    ipsa porro delectus quidem dolorem ad.</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" data-dismiss="modal">I Agree</button>
+            </div>
+        </div>
+        <!-- /.modal-content -->
+    </div>
+    <!-- /.modal-dialog -->
+</div>
+<!-- /.modal -->
+
+{% endblock %}
+

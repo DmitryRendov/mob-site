@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+{% load cms_tags %}
+
+{% block base_content %}
+
+    <!-- Page Content -->
+    <div class="container">
+        <div class="row">
+
+            <!-- Blog Entries Column -->
+            <div class="col-md-8">
+                <h2>{% page_attribute "title" %}</h2>
+                <p class="lead">by <a href="/users/mob-admin/">MoB Admin</a></p>
+                <p>от {% page_attribute "created_by" %}</p>
+                <hr />
+                {% placeholder blog_content %}
+            </div>
+
+            <!-- Blog Sidebar Widgets Column -->
+            <div class="col-md-4 sidebar">
+                 {% static_placeholder 'sidebar' %}
+            </div>
+
+        </div><!-- /.row -->
+    </div>
+
+{% endblock %}
+
+
+
+
+
+
+
+
+
+
+
+

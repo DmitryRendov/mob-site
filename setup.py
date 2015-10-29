@@ -9,7 +9,7 @@ config = {
     'url': 'http://minecraft.of.by',
     'author_email': 'drendov@gmail.com',
     'version': ''
-               '0.1',
+               '1.1',
     'install_requires': ['nose'],
     'packages': ['mob'],
     'scripts': [],

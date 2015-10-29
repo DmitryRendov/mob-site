@@ -1,0 +1,11 @@
+admin/
+js/
+css/
+fonts/
+cms/
+djangocms_admin_style/
+libraries/
+node_modules/
+djangocms_text_ckeditor/
+index.html
+

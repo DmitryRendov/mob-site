@@ -1,0 +1,54 @@
+<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand page-scroll" href="{% if not current_page.is_home %}/{% endif %}#page-top">Minecraft.of.by</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse navbar-ex1-collapse">
+            <ul class="nav navbar-nav">
+                <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
+                <li>
+                    <a class="page-scroll" href="{% if not current_page.is_home %}/{% endif %}#about">О проекте</a>
+                </li>
+                <li>
+                    <a class="page-scroll" href="{% if not current_page.is_home %}/{% endif %}#howtoplay">Как играть</a>
+                </li>
+                <li>
+                    <a class="page-scroll" href="{% if not current_page.is_home %}/{% endif %}#faq">Вопросы и ответы (FAQ)</a>
+                </li>
+                <li class="dropdown">
+                    <a aria-expanded="false" role="button" data-toggle="dropdown" class="dropdown-toggle"
+                       href="/lib/">Библиотека <span class="caret"></span></a>
+                    <ul role="menu" class="dropdown-menu">
+                        <li><a class="page-scroll" href="/lib/how-to-play-minecraft/">Как играть в Майнкрафт</a></li>
+                        <li><a class="page-scroll" href="/lib/how-to-claim-land-grief-prevention/">Как приватить Участки</a></li>
+                        <li><a class="page-scroll" href="/lib/how-to-trade-with-users/">Как торговать с игроками</a></li>
+                        <li class="divider"></li>
+                        <li><a href="/lib/rules/">Правила сервера</a></li>
+                        <li class="divider"></li>
+                        <li><a href="/forums/">Курилка</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a class="page-scroll" href="{% if not current_page.is_home %}/{% endif %}#projects">Наши проекты</a>
+                </li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                {% if user.is_authenticated %}
+                <li><a href="/auth/logout/">Выйти { {{ user.username }} }</a></li>
+                {% else %}
+                <li><a href="/auth/login/">Войти</a></li>
+                {% endif %}
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>

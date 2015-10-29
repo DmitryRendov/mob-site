@@ -42,13 +42,13 @@ module.exports = function(grunt) {
           src : '<%= globalConfig.bower_path %>/bootstrap/dist/js/bootstrap.min.js',
           dest : '<%= globalConfig.scripts %>/',
           filter : 'isFile'
-        }, {
+        },/* {
           expand : true,
           flatten : true,
           src : '<%= globalConfig.bower_path %>/bootstrap/dist/css/bootstrap.min.css',
           dest : '<%= globalConfig.styles %>/',
           filter : 'isFile'
-        }, {
+        }*/ {
           expand : true,
           flatten : true,
           src : '<%= globalConfig.bower_path %>/font-awesome/css/font-awesome.min.css',
