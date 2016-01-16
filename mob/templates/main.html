@@ -1,366 +1,398 @@
 {% extends "base.html" %}
 
 {% block base_content %}
-    <!-- Page Content -->
+<!-- Page Content -->
+<div class="container">
+<div class="row">
+
+<!-- Intro Section -->
+<section id="intro" class="intro-section">
     <div class="container">
         <div class="row">
+            <div class="col-lg-12">
+                <!-- Page Content -->
+                <div class="container">
 
-        <!-- Intro Section -->
-        <section id="intro" class="intro-section">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-12">
-                        <!-- Page Content -->
-                        <div class="container">
+                    <!-- Heading Row -->
+                    <div class="row">
+                        <div class="col-md-7 header-splash">
+                            <img class="img-responsive img-rounded" src="/media/mob-splash03.jpg" alt="">
+                        </div>
+                        <!-- /.col-md-8 -->
+                        <div class="col-md-5">
+                            <h1>Майнкрафт в Беларуси</h1>
 
-                            <!-- Heading Row -->
-                            <div class="row">
-                                <div class="col-md-7 header-splash">
-                                    <img class="img-responsive img-rounded" src="http://placehold.it/900x550" alt="">
-                                </div>
-                                <!-- /.col-md-8 -->
-                                <div class="col-md-5">
-                                    <h1>Майнкрафт в Беларуси</h1>
+                            <p>Добро пожаловать на наш игровой сервер Майнкрафт. Здесь ты сможешь построить город свой
+                                мечты, создать что-то выдающеся и замечательное. Построй свой собственный уютный дом,
+                                величественный замок или современный таун-хауз! Подружись с другими игроками и
+                                построй вместе целый город или воссоздай любое известное строение в мире.</p>
 
-                                    <p>Добро пожаловать на наш игровой сервер Майнкрафт. Здесь Вы сможете построить город свой
-                                        мечты, создать что-то выдающеся и замечательное. Постройту свой собственный уютный дом,
-                                        величественный замок или современный таун-хауз! Подружитесь с другими игроками и
-                                        постройте вместе целый город или воссоздайте любое известное строение в мире.</p>
+                            <p>У нас всегда рады и искушенному профессионалу, который ценит надёжный игровой сервер без
+                                кучи ненужных плагинов, так и новичку, которому нужно всё объяснять и показывать. Мы
+                                ценим
+                                своих игроков и готовы бороться за каждого умелого и мотивированного строителя нашего
+                                мира.</p>
 
-                                    <p>У нас всегда рады и искушенному профессионалу, который ценит надёжный игровой сервер без
-                                        кучи ненужных плагинов, так и новичку, которому нужно всё объяснять и показывать. Мы
-                                        ценим
-                                        своих игроков и готовы бороться за каждого умелого и мотивированного строителя нашего
-                                        мира.</p>
-
-                                    <p class="text-info">Мы рады видеть Вас на нашем сервере и постараемся сделать всё
-                                        возможное, чтобы Вы
-                                        запомнили нас и всегда возвращались к нам.</p>
-
-                                    {% if user.is_authenticated %}
-                                    <button type="button" class="btn btn-primary btn-normal" data-toggle="tooltip"
-                                            data-placement="left" title=""
-                                            data-original-title="Личный кабинет игрока">Личный кабинет
-                                    </button>
-                                    {% else %}
-                                    <button type="button" class="btn btn-primary btn-lg" data-toggle="tooltip"
-                                            data-placement="left" title=""
-                                            data-original-title="Зарегистрироваться или войти на сайт">Присоединиться
-                                    </button>
-                                    {% endif %}
-
-                                </div>
-                                <!-- /.col-md-4 -->
-                            </div>
-                            <!-- /.row -->
+                            <p class="text-info">Мы рады видеть вас на нашем сервере и постараемся сделать всё
+                                возможное, чтобы вы
+                                запомнили нас и всегда возвращались к нам.</p>
+                            <!--
+                            {% if user.is_authenticated %}
+                            <button type="button" class="btn btn-primary btn-normal" data-toggle="tooltip"
+                                    data-placement="left" title=""
+                                    data-original-title="Личный кабинет игрока">Личный кабинет
+                            </button>
+                            {% else %}
+                            <button type="button" class="btn btn-primary btn-normal" data-toggle="tooltip"
+                                    data-placement="left" title="Зарегистрироваться или войти на сайт"
+                                    data-original-title="Зарегистрироваться или войти на сайт">Присоединиться
+                            </button>
+                            {% endif %}
+                            -->
 
                         </div>
-                        <!-- /.container -->
-
+                        <!-- /.col-md-4 -->
                     </div>
+                    <!-- /.row -->
+
                 </div>
+                <!-- /.container -->
+
             </div>
-        </section>
+        </div>
+    </div>
+</section>
 
-        <!-- About Section -->
-        <section id="about" class="about-section">
-            <div class="container">
+<!-- About Section -->
+<section id="about" class="about-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <h1>О проекте MOB</h1>
+
+                <p>Беларусы тоже играют в Майнкрафт. Любого возраста. Наш сервер появился благодря нескольким
+                    энтузиастам, которые хотяли предоставить своим детям безопасную площадку для игры в Майн.
+                    Ни для кого не секрет, что Майн&nbsp;&mdash; социальная игра. В этом ее сила и её опасность. С одной
+                    стороны&nbsp;&mdash; мы
+                    заботимся о творческом развитии своих детей, с другой&nbsp;&mdash; строго следим <a
+                            href="/rules/safe-play">за
+                        порядком на нашем
+                        сервере</a>.</p>
+
+                <!-- Content Row -->
                 <div class="row">
-                    <div class="col-lg-12">
-                        <h1>О проекте MOB</h1>
+                    <div class="col-md-4">
+                        <h2>Наши цели</h2>
 
-                        <p>Беларусы тоже играют в Майнкрафт. Любого возраста. Наш сервер появился благодря нескольким
-                            энтузиазму отца, который хотял предоставить своим детям безопасную площадку для игры в Майнкрафт.
-                            Ни для кого не секрет, что Майн - социальная игра. В этом ее сила и её опасность. С одной стороны - мы
-                            заботимся о развитии своих детей, с другой - строго следим <a href="/rules/safe-play">за порядком на нашем
-                            сервере</a>.</p>
+                        <ul>
+                            <li>Мы нацелены на адекватных игроков любого возраста и представляем собой растущее
+                                общество игроков Майна;
+                            </li>
+                            <li>Наша платформа максимально
+                                приближена к &laquo;ванильной&raquo; версии Майнкрафта с минимально-необходимым пакетом
+                                плагинов;
+                            <li>Для игры подойдет любой клиент соответствующей версии <strong class="text-success">(1.8.х)</strong>;
+                            </li>
+                            <li>Наша цель&nbsp;&mdash; воссоздание архитектурных памятников Вашей страны в блоках
+                                Майна.
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- /.col-md-4 -->
+                    <div class="col-md-4">
+                        <h2>У нас есть</h2>
 
-                        <!-- Content Row -->
-                        <div class="row">
-                            <div class="col-md-4">
-                                <h2>Наши цели</h2>
-
-                                <ul>
-                                    <li>Мы нацелены на адекватных игроков любого возраста и представляем собой растущее
-                                        общество игроков Майнкрафта (Майна) в Беларуси;
-                                    </li>
-                                    <li>Наша платформа максимально
-                                        приближена к &laquo;ванильной&raquo; версии Майнкрафта с минимально-необходимым пакетом
-                                        плагинов;
-                                    <li>Для игры подойдет любой клиент соответствующей версии <strong class="text-success">(1.8.х)</strong>;
-                                    </li>
-                                    <li>Наша цель - воссоздание архитектурных памятников Вашей страны в блоках Майна.</li>
-                                </ul>
-                            </div>
-                            <!-- /.col-md-4 -->
-                            <div class="col-md-4">
-                                <h2>У нас есть</h2>
-
-                                <ul>
-                                    <li>Приватный Участок на <strong class="text-success">512</strong> блоков;</li>
-                                    <li>Бонусные блоки за успешную регистрацию на сайте&nbsp;&mdash; <strong
+                        <ul>
+                            <li>Приватный Участок на <strong class="text-success">512</strong> блоков;</li>
+                            <!-- <li>Бонусные блоки за успешную регистрацию на сайте&nbsp;&mdash; <strong
                                             class="text-success">+512</strong> блоков;
                                     </li>
                                     <li>Бонусные блоки за привязку социальных сетей&nbsp;&mdash; <strong class="text-success">+64</strong>
                                         блока за каждую соц. сеть;
-                                    </li>
-                                    <li>Три точки для быстрой телепортации&nbsp;&mdash; две точка Дома и Ваша кровать;</li>
-                                    <li>Телепорты к игрокам по запросу;</li>
-                                    <li>Телепорты по Биомам (локациям или варпам);</li>
-                                    <li>Экономика на сервере&nbsp;&mdash; Вы можете создавать магазины, торговать с другими
-                                        игроками
-                                        или посетить наш официальный магазин <strong class="text-success">&laquo;На
-                                            спавне&raquo;</strong>;
-                                    </li>
-                                    <li>Плагин Работ, позволяющий вам заработать копая блоки, убирая урожай </li>
-                                    <li>PvP включено на сервере (кроме приватных Участков), по вещи (лут) выпадают
-                                        только в Аду или Крае.
-                                    </li>
-                                </ul>
-                            </div>
-                            <!-- /.col-md-4 -->
-                            <div class="col-md-4">
-                                <h2>Важно!</h2>
+                                    </li> -->
+                            <li><strong class="text-success">Три точки</strong> для быстрой телепортации&nbsp;&mdash;
+                                две точка Дома и твоя кровать;
+                            </li>
+                            <li>Телепорты к игрокам по запросу;</li>
+                            <li>Телепорты по Биомам (локациям или варпам);</li>
+                            <li>Неорганиченный мир;</li>
+                            <li>Экономика на сервере&nbsp;&mdash; ты можешь создать магазин, торговать с другими
+                                игроками
+                                или посетить наш официальный магазин <strong class="text-success">&laquo;На
+                                    спавне&raquo;</strong>;
+                            </li>
+                            <li>Плагин Работ, позволяющий вам заработать копая ресурсы, убирая урожай и проч.</li>
+                            <li>PvP включено на сервере (кроме приватных Участков), по вещи (лут) выпадают
+                                только в Аду или Крае.
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- /.col-md-4 -->
+                    <div class="col-md-4">
+                        <h2>Важно!</h2>
 
-                                <ul>
-                                    <li><strong class="text-success">Это любительский сервер!</strong></li>
-                                    <li>Мы не преследуем коммерческие цели и не имеем
-                                        никакого отношения к Mojang;
-                                    </li>
-                                    <li><span class="text-danger">У нас нельзя купить ранг Модератора или Админку. Мы не продаём ресурсы
+                        <ul>
+                            <li><strong class="text-success">Это любительский сервер!</strong></li>
+                            <li>Мы не преследуем коммерческие цели и не имеем
+                                никакого отношения к Mojang;
+                            </li>
+                            <li><span class="text-danger">У нас нельзя купить ранг Модератора или Админку. Мы не продаём ресурсы
                                         или другие услуги за реальные деньги;</span>
-                                    </li>
-                                    <li>Любые попытки выдать себя за членов Администрации с целью получения
-                                        выгоды или обмана будут жёстко наказаны.
-                                    </li>
-                                </ul>
-                            </div>
-                            <!-- /.col-md-4 -->
-                        </div>
-                        <!-- /.row -->
-
+                            </li>
+                            <li>У нас есть <strong class="text-success">ранг Помощкника</strong>, но его нужно
+                                заслужить, помогая другим игрокам.
+                            </li>
+                            <li>Любые попытки выдать себя за членов Администрации с целью получения
+                                выгоды или обмана будут жёстко наказаны.
+                            </li>
+                        </ul>
                     </div>
+                    <!-- /.col-md-4 -->
                 </div>
+                <!-- /.row -->
+
             </div>
-        </section>
-
-        <!-- HowToPlay Section -->
-        <section id="howtoplay" class="howtoplay-section">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-12">
-                        <h1>Как играть в Minecraft</h1>
-
-                        <p>Как играть в Майнкрафт? Здесь мы познакомимся с основами игры Майнкрафт.
-                            Скорее всего Вы уже установили игру и даже сумели запустить её. Давайте теперь вкратце познакомимся
-                            с тем как же в неё играть.
-                        </p>
-
-                        <section class="process">
-                            <div class="container">
-
-                                <div class="row step first">
-                                    <div class="col-sm-2">
-                                        <div class="step-icon">1</div>
-                                    </div>
-                                    <div class="col-sm-10">
-                                        <div class="box">
-                                            <div class="row">
-                                                <div class="col-md-7 prn">
-                                                    <div class="img-wrap"><img class="img img-responsive"
-                                                                               alt="Цель 1 - Выживайте"
-                                                                               src="http://swlabs.co/arco/assets/images/process1.jpg">
-
-                                                        <div class="img-effect"></div>
-                                                    </div>
-                                                </div>
-                                                <div class="col-md-5 pln">
-                                                    <div class="text-wrap">
-                                                        <div class="arco-lean-invi"></div>
-                                                        <div class="text-content wow bounceInRight animated">
-                                                            <h5>Выживайте</h5>
-
-                                                            <p class="info"><i class="icon-hourglass color-primary"></i><i
-                                                                    class="color-primary">Цель:</i><i>выжить</i><span
-                                                                    class="mlm mrm"></span></p>
-
-                                                            <p class="text">Не секрет, что основной режим нашего сервера -
-                                                                &laquo;Выживание&raquo;. Обезопасьте себя, построив себе жилище
-                                                                и обеспечив
-                                                                едой и растениями. Освойтесь с игровым миром, его особеностями и
-                                                                сложностями.</p></div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="row divide-step">
-                                    <div class="col-sm-2">
-                                        <div class="step-arrow"><img alt="Цель 2 сервера MOB - Созидайте"
-                                                                     src="http://swlabs.co/arco/assets/images/arrow.png">
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="row step right">
-                                    <div class="col-sm-2">
-                                        <div class="step-icon">2</div>
-                                    </div>
-                                    <div class="col-sm-10">
-                                        <div class="box">
-                                            <div class="row">
-                                                <div class="col-md-5 pln">
-                                                    <div class="text-wrap">
-                                                        <div class="text-content wow bounceInLeft animated"><h5>Созидайте</h5>
-
-                                                            <p class="info"><i class="icon-hourglass color-primary"></i><i
-                                                                    class="color-primary">Цель:</i><i>постройка дома</i><span
-                                                                    class="mlm mrm"></span></p>
-
-                                                            <p class="text">Постройте дом своей мечты. Воплотите самые смелые
-                                                                архитектурные решения. Воссоздайте известное строение Вашего
-                                                                города.</p></div>
-                                                    </div>
-                                                </div>
-                                                <div class="col-md-7">
-                                                    <div class="img-wrap"><img class="img img-responsive" alt="arco"
-                                                                               src="http://swlabs.co/arco/assets/images/process2.jpg">
-
-                                                        <div class="img-effect"></div>
-                                                    </div>
-                                                    <div class="arco-lean-invi"></div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="row divide-step">
-                                    <div class="col-sm-2">
-                                        <div class="step-arrow"><img alt="Цель 3 сервера MOB - Творите"
-                                                                     src="http://swlabs.co/arco/assets/images/arrow.png">
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="row step last">
-                                    <div class="col-sm-2">
-                                        <div class="step-icon">3</div>
-                                    </div>
-                                    <div class="col-sm-10">
-                                        <div class="box">
-                                            <div class="row">
-                                                <div class="col-md-7 prn">
-                                                    <div class="img-wrap"><img class="img img-responsive" alt="arco"
-                                                                               src="http://swlabs.co/arco/assets/images/process3.jpg">
-
-                                                        <div class="img-effect"></div>
-                                                    </div>
-                                                </div>
-                                                <div class="col-md-5 pln">
-                                                    <div class="text-wrap">
-                                                        <div class="arco-lean-invi"></div>
-                                                        <div class="text-content wow bounceInRight animated">
-                                                            <h5>Творите</h5>
-
-                                                            <p class="info"><i class="icon-hourglass color-primary"></i><i
-                                                                    class="color-primary">Цель:</i><i>построить свой
-                                                                город</i><span
-                                                                    class="mlm mrm"></span></p>
-
-                                                            <p class="text">Соберите команду, дайте каждому строителю отдельный
-                                                                участок для работы и постройте целый город.</p></div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </section>
-
-                        <p>Игра в Майнкрафт увлекательна и развивает воображение. Проверьте на себе.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- F.A.Q Section -->
-        <section id="faq" class="faq-section">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-12">
-                        <h1>Вопросы и ответы (FAQ)</h1>
-
-                        <h3>Как зарегистрироваться в игре?</h3>
-
-                        <p>Раскрывающийся слайдер с описанием ответа</p>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-                            et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-                            aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
-                            nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
-                            mollit anim id est laborum.</p>
-
-                        <h3>Как зарегистрироваться в игре?</h3>
-
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-                            et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-                            aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
-                            nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
-                            mollit anim id est laborum.</p>
-
-                        <h3>Как зарегистрироваться в игре?</h3>
-
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-                            consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                            enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
-                            nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
-                            mollit anim id est laborum.</p>
-
-                        <button type="button" class="btn btn-primary btn-lg" data-toggle="tooltip"
-                                data-placement="left" title=""
-                                data-original-title="Зарегистрироваться или войти на сайт">Присоединиться
-                        </button>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Contact Section -->
-        <section id="projects" class="projects-section">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-12">
-                        <h1>Наши проекты</h1>
-
-                        <p>Галерея работ и статусов, с указанием авторов и сроков строительства.</p>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-                            et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-                            aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-                            culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur
-                            adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-                            veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
-                            irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-                            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
-                            est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                            incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                            ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
-                            voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                            proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet,
-                            consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                            enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
-                            nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
-                            mollit anim id est laborum.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        </div><!-- /.row -->
+        </div>
     </div>
+</section>
+
+<!-- HowToPlay Section -->
+<section id="howtoplay" class="howtoplay-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <h1>Как играть в Майн</h1>
+
+                <p>Как играть в Майнкрафт? Здесь мы познакомимся с основами игры Майнкрафт.
+                    Скорее всего ты уже установил игру и даже сумел запустить её и подключиться к нашему серверу. Если
+                    это не так&nbsp;&mdash; посмотри руководство для новичков <a
+                            href="/lib/how-to-start-play-minecraft/">"Как начать играть в Майн"</a>.
+                    Давайте теперь вкратце познакомимся
+                    с тем как же в неё играть.
+                </p>
+
+                <p>Игра в Майнкрафт увлекательна и развивает воображение. В Майн играют люди любых возрастов и
+                    профессий.
+                    Проверь на себе!</p>
+                <section class="process">
+                    <div class="container">
+
+                        <div class="row step first">
+                            <div class="col-sm-2">
+                                <div class="step-icon">1</div>
+                            </div>
+                            <div class="col-sm-10">
+                                <div class="box">
+                                    <div class="row">
+                                        <div class="col-md-7 prn">
+                                            <div class="img-wrap"><img class="img img-responsive"
+                                                                       alt="Цель 1 - Выживайте"
+                                                                       src="/media/mob-splash04.jpg">
+
+                                                <div class="img-effect"></div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-5 pln">
+                                            <div class="text-wrap">
+                                                <div class="arco-lean-invi"></div>
+                                                <div class="text-content wow bounceInRight animated">
+                                                    <h5>Выживайте</h5>
+
+                                                    <p class="info"><i class="icon-hourglass color-primary"></i><i
+                                                            class="color-primary">Цель:</i><i>выжить</i><span
+                                                            class="mlm mrm"></span></p>
+
+                                                    <p class="text">Не секрет, что основной режим нашего сервера&nbsp;&mdash;
+                                                        &laquo;Выживание&raquo;. Обезопась себя, построив себе
+                                                        жилище и обеспечив себя едой и растениями на своём приватном
+                                                        Участке (<a
+                                                                href="/lib/how-to-private-land/">Как
+                                                            приватить?</a>). Освойся в игровом
+                                                        мире, пощнакомься с его особеностях и сложностях.</p></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row divide-step">
+                            <div class="col-sm-2">
+                                <div class="step-arrow"><img alt="Цель 2 сервера MOB - Созидайте"
+                                                             src="/static/img/arrow.png">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row step right">
+                            <div class="col-sm-2">
+                                <div class="step-icon">2</div>
+                            </div>
+                            <div class="col-sm-10">
+                                <div class="box">
+                                    <div class="row">
+                                        <div class="col-md-5 pln">
+                                            <div class="text-wrap">
+                                                <div class="text-content wow bounceInLeft animated"><h5>Созидайте</h5>
+
+                                                    <p class="info"><i class="icon-hourglass color-primary"></i><i
+                                                            class="color-primary">Цель:</i><i>постройка дома</i><span
+                                                            class="mlm mrm"></span></p>
+
+                                                    <p class="text">Построй дом своей мечты. Прояви фантазию и воплоти
+                                                        самые смелые
+                                                        архитектурные решения. Воссоздай известное строение твоего
+                                                        города или страны. Каждое уникальное здание, которое ты
+                                                        построишь,
+                                                        позволит тебе <strong class="text-success">увеличить твой
+                                                            приватный Участок вдвое!</strong></p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-7">
+                                            <div class="img-wrap"><img class="img img-responsive" alt="arco"
+                                                                       src="/media/mob-splash05.jpg">
+
+                                                <div class="img-effect"></div>
+                                            </div>
+                                            <div class="arco-lean-invi"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row divide-step">
+                            <div class="col-sm-2">
+                                <div class="step-arrow"><img alt="Цель 3 сервера MOB - Творите"
+                                                             src="/static/img/arrow.png">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row step last">
+                            <div class="col-sm-2">
+                                <div class="step-icon">3</div>
+                            </div>
+                            <div class="col-sm-10">
+                                <div class="box">
+                                    <div class="row">
+                                        <div class="col-md-7 prn">
+                                            <div class="img-wrap"><img class="img img-responsive" alt="arco"
+                                                                       src="/media/mob-splash02t.jpg">
+
+                                                <div class="img-effect"></div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-5 pln">
+                                            <div class="text-wrap">
+                                                <div class="arco-lean-invi"></div>
+                                                <div class="text-content wow bounceInRight animated">
+                                                    <h5>Творите</h5>
+
+                                                    <p class="info"><i class="icon-hourglass color-primary"></i><i
+                                                            class="color-primary">Цель:</i><i>построить свой
+                                                        город</i><span
+                                                            class="mlm mrm"></span></p>
+
+                                                    <p class="text">Собери свою команду, дай каждому строителю отдельный
+                                                        кусочек внутри своего приватного Участка для работы&nbsp;&mdash;
+                                                        постройте
+                                                        вместе целый
+                                                        город. Почувствуй себя главным архитектором!</p></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- F.A.Q Section -->
+<section id="faq" class="faq-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <h1>Вопросы и ответы (FAQ)</h1>
+
+                <h3>Как зарегистрироваться в игре?</h3>
+
+                <p>У тебя есть два варианта регистрации&nbsp;&mdash; на сайте и в игре. Рассмотрим оба способа:
+                <ol>
+                    <li>Проще всего зарегистрироваться прямо из игры. При первом же подключении к серверу, сама игра
+                        предолжит тебе зарегистрироваться ( <a href="/lib/how-to-start-play-minecraft/">"Как начать
+                            играть в Майн"</a> ). Кстати, после этого ты можешь смело войти на наш сайт со своим логином
+                        и паролем и активировать свой Личный кабинет через почту и получить бонусные блоки
+                        (<strong class="text-success">+512 блоков</strong>) для приватных Участков.
+                    </li>
+                    <li>Регистрация на сайте доступна здесь&nbsp;&mdash; <a href="/auth/register/">"Регистрация на
+                        сайте"</a>. Просто заполни форму, выбрав себе имя(игровой ник), укажи свой пароль и адрес
+                        электронной почты. На неё придет письмо с подтверждением регистрации. Кстати, когда ты
+                        подтвердишь свою регистрацию&nbsp;&mdash; ты полчуишь дополнительные бонусные блоки на свой
+                        счёт.
+                    </li>
+                </ol>
+                </p>
+
+                <h3>Как получить бонусные блоки для Приватных Участков?</h3>
+
+                <p>Вариантов несколько и они будут только расширяться со временем:
+                <ol>
+                    <li><strong class="text-success">+ 512 блоков</strong>&nbsp;&mdash; зарегистрируйся на сайте и
+                        активируй свой Личный кабинет через почту;
+                    </li>
+                    <li><strong class="text-success">ТвоиБлоки x 2</strong>&nbsp;&mdash; строй уникальные здания и
+                        постройки и зови
+                        Помощников&nbsp;&mdash; участок будет увеличен вдвое,
+                        если нам понравится твоя работа;
+                    </li>
+                    <li><span class="text-muted">Привяжи свою соц. сеть и поделись ссылкой на наш сайт (в процессе разработки);</span>
+                    </li>
+                    <li><span class="text-muted">Пригласи друга по своей уникальной ссылке и попроси его зарегистрироваться
+                        на сайте (в процессе разработки);</span>
+                    </li>
+                    <li><span
+                            class="text-muted">Проголосуй за наш сайт в каталогах Майна (в процессе разработки);</span>
+                    </li>
+                </ol>
+                </ol>
+                </p>
+
+                <h3>Я забыл пароль и не могу войти в игру.</h3>
+                <ol>
+                    <li>Возможно игрок с таким ником (игровым именем) уже зарегистрирован на сайте. В таком случае, дай
+                        нам знать (если у тебя лицензионная версия игры), или смени имя на другое;
+                    </li>
+                    <li>В случае, если это действительно уже играл на нашем сервере&nbsp;&mdash; воспользуйся <a
+                            href="/auth/forgot/">восстановлением пароля</a> на нашем сайте. Это сработает только в
+                        случае, если ты завершил регистрацию и активировал свой Личный кабинет через почту.
+                        <span class="text-danger">Если ты не закончил регистрацию на сайте&nbsp;&mdash; мы ничем не сможем тебе помочь</span>.
+                    </li>
+                </ol>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Contact Section -->
+<section id="projects" class="projects-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <h1>Наши проекты</h1>
+
+                <p>Галерея работ и статусов, с указанием авторов и сроков строительства.</p>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+</div>
+</div>
 
 {% endblock %}
 

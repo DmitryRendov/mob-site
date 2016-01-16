@@ -59,7 +59,7 @@ class User(AbstractBaseUser, PermissionsMixin):
                                 ])
     first_name = models.CharField(_('first name'), max_length=30, blank=True, null=True)
     last_name = models.CharField(_('last name'), max_length=30, blank=True, null=True)
-    email = models.EmailField(_('email address'), max_length=255, unique=True, default="your@email.com")
+    email = models.EmailField(_('email address'), max_length=255, unique=True, null=True, default="your@email.com")
     is_staff = models.BooleanField(_('staff status'), default=False,
                                    help_text=_('Designates whether the user can log into this admin site.'))
     is_active = models.BooleanField(_('active'), default=False,
@@ -73,7 +73,7 @@ class User(AbstractBaseUser, PermissionsMixin):
     x = models.DecimalField(_('X coord'), max_digits=20, decimal_places=10, default="0")
     y = models.DecimalField(_('Y coord'), max_digits=20, decimal_places=10, default="0")
     z = models.DecimalField(_('Z coord'), max_digits=20, decimal_places=10, default="0")
-    world = models.CharField(_('World name'), max_length=255, default="survival")
+    world = models.CharField(_('World name'), max_length=255, null=True, default="survival")
     isLogged = models.SmallIntegerField(_('Is logged user'), default="0")
     realname = models.CharField(_('Realname'), max_length=255, default="Player")
 

@@ -28,6 +28,7 @@ urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
     url(r'^auth/', include('loginsys.urls')),
     url(r'^lib/', include('lib.urls')),
+    url(r'^layout/$', landpage.views.layout, name='layout'),
     url(r'^(?P<url>.*/)$', views.flatpage),
 ]
 

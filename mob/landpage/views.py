@@ -14,3 +14,9 @@ def index(request):
     args.update(csrf(request))
     return render_to_response("main.html",
                               context_instance=RequestContext(request))
+
+def layout(request):
+    args = {}
+    args.update(csrf(request))
+    return render_to_response("layout.html",
+                              context_instance=RequestContext(request))
