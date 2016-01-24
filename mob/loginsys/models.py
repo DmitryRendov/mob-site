@@ -66,16 +66,17 @@ class User(AbstractBaseUser, PermissionsMixin):
                                     help_text=_(
                                         'Designates whether this user should be treated as active. Unselect this instead of deleting accounts.'))
     date_joined = models.DateTimeField(_('date joined'), default=timezone.now)
-
     dob = models.DateField(_('date of birth'), blank=True, null=True)
+
     ip = models.CharField(_('IP address'), max_length=40, default="127.0.0.1")
-    lastlogin = models.DateField(_('Last login'), auto_now_add=True)
-    x = models.DecimalField(_('X coord'), max_digits=20, decimal_places=10, default="0")
-    y = models.DecimalField(_('Y coord'), max_digits=20, decimal_places=10, default="0")
-    z = models.DecimalField(_('Z coord'), max_digits=20, decimal_places=10, default="0")
+    lastlogin = models.BigIntegerField(_('Last login'))
+    x = models.FloatField(_('X coord'), default="0")
+    y = models.FloatField(_('Y coord'), default="0")
+    z = models.FloatField(_('Z coord'), default="0")
     world = models.CharField(_('World name'), max_length=255, null=True, default="survival")
     isLogged = models.SmallIntegerField(_('Is logged user'), default="0")
-    realname = models.CharField(_('Realname'), max_length=255, default="Player")
+    realname = models.CharField(_('Realname'), max_length=255, default="MOB Player")
+
 
     USERNAME_FIELD = 'username'
     REQUIRED_FIELDS = ['email', ]
@@ -94,5 +95,16 @@ class User(AbstractBaseUser, PermissionsMixin):
     def get_short_name(self):
         return self.first_name
 
+    def has_email(self):
+        return self.email and self.email != "your@email.com"
+
+    def get_email(self):
+        return self.email
+
+
     def email_user(self, subject, message, from_email=None):
+        """
+        Sends an email to this User.
+        """
         send_mail(subject, message, from_email, [self.email])
+

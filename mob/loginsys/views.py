@@ -1,7 +1,8 @@
-# coding=utf-8
+# -*- encoding: utf-8 -*-
 from django.shortcuts import render_to_response, redirect
 from django.contrib import auth
 from django.template import RequestContext
+from django.template.loader import render_to_string
 from django import forms
 from django.contrib.auth.models import User
 from django.contrib.auth.forms import UserCreationForm
@@ -13,10 +14,12 @@ from django.contrib.auth import get_user_model
 
 ## Only for debug
 import logging
+
 logging.basicConfig(level=logging.DEBUG, format='%(asctime)s - %(levelname)s - %(message)s')
 # end of debug
 
 User = get_user_model()
+
 
 def login(request):
     args = {}
@@ -24,15 +27,21 @@ def login(request):
     if request.POST:
         username = request.POST.get('username', '')
         password = request.POST.get('password', '')
-        #remember_me = request.POST.get('remember_me', '')
+        #remember = request.POST.get('remember', '')
         user = None
         users = get_user_model().objects.filter(Q(username=username) | Q(email=username))
         for user in users:
-            if user.is_active and user.check_password(password):
-                user.backend = 'django.contrib.auth.backends.ModelBackend'
-                auth.login(request, user)
-                return redirect('/')
-        args['login_error'] = 'Пользователь не найден, или пароль не верен!'
+            if user.check_password(password):
+                if user.is_active:
+                    user.backend = 'django.contrib.auth.backends.ModelBackend'
+                    auth.login(request, user)
+                    return redirect('/')
+                elif user.has_email():
+                    args['login_error'] = u'Аккаунт не активирован! Чтобы завершить активацию, тебе нужно пройти по ссылке из письма. <a href="/auth/request_email/">Запросить письмо</a> еще раз...'
+                else:
+                    args['login_error'] = u'Регистрация была из игры. Укажи там свой email!'
+            else:
+                args['login_error'] = 'Пользователь не найден, или пароль не верен!'
         return render_to_response("login.html",
                                   args,
                                   context_instance=RequestContext(request))
