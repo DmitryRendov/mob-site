@@ -116,3 +116,10 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, "static/")
+
+EMAIL_HOST = 'mail.demon.of.by'
+EMAIL_HOST_USER = 'for-spam@minecraft.of.by'
+EMAIL_HOST_PASSWORD = '111'
+EMAIL_PORT = 25
+EMAIL_USE_TLS = False
+DEFAULT_FROM_EMAIL = 'for-spam@minecraft.of.by'

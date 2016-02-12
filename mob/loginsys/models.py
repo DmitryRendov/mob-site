@@ -12,6 +12,7 @@ from django.contrib.auth.models import AbstractBaseUser, PermissionsMixin, BaseU
 from django.contrib.auth import models as auth_models
 from django import forms
 from django.contrib.auth.models import User
+from django.contrib.sites.shortcuts import get_current_site
 
 class UserManager(BaseUserManager):
     """
@@ -65,11 +66,13 @@ class User(AbstractBaseUser, PermissionsMixin):
     is_active = models.BooleanField(_('active'), default=False,
                                     help_text=_(
                                         'Designates whether this user should be treated as active. Unselect this instead of deleting accounts.'))
+    activation_key = models.CharField(max_length=40, blank=True)
+    key_expires = models.DateTimeField(default=timezone.now)
     date_joined = models.DateTimeField(_('date joined'), default=timezone.now)
     dob = models.DateField(_('date of birth'), blank=True, null=True)
 
     ip = models.CharField(_('IP address'), max_length=40, default="127.0.0.1")
-    lastlogin = models.BigIntegerField(_('Last login'))
+    lastlogin = models.BigIntegerField(_('Last login'), default=False)
     x = models.FloatField(_('X coord'), default="0")
     y = models.FloatField(_('Y coord'), default="0")
     z = models.FloatField(_('Z coord'), default="0")
@@ -101,10 +104,15 @@ class User(AbstractBaseUser, PermissionsMixin):
     def get_email(self):
         return self.email
 
-
     def email_user(self, subject, message, from_email=None):
         """
         Sends an email to this User.
         """
-        send_mail(subject, message, from_email, [self.email])
+        send_mail(subject, message, from_email, [self.email], fail_silently=False)
 
+    def set_activation_data(self, activation_key, key_expires):
+        """
+        Set activation data when register initially
+        """
+        self.activation_key = activation_key
+        self.key_expires = key_expires
