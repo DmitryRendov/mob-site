@@ -1,6 +1,6 @@
 {
   "name": "minecraft.of.by",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "minecraft.of.by project",
   "authors": [
     "Dmitry Vl. Rendov"
@@ -11,13 +11,13 @@
     "**/.*",
     "node_modules",
     "bower_components",
-    "libraries",
     "test",
     "tests"
   ],
   "dependencies": {
     "jquery": "latest",
-    "bootstrap": "latest",
+    "jquery.easing": "latest",
+    "bootswatch-dist": "slate",
     "font-awesome": "latest",
     "modernizr": "latest",
     "html5shiv": "latest",

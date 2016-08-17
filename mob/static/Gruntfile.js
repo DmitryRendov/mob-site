@@ -33,22 +33,29 @@ module.exports = function(grunt) {
         }, {
           expand : true,
           flatten : true,
+          src : '<%= globalConfig.bower_path %>/jquery.easing/js/jquery.easing.min.js',
+          dest : '<%= globalConfig.scripts %>/',
+          filter : 'isFile'
+        },{
+          expand : true,
+          flatten : true,
           src : '<%= globalConfig.bower_path %>/html5shiv/dist/html5shiv.min.js',
           dest : '<%= globalConfig.scripts %>/',
           filter : 'isFile'
         }, {
           expand : true,
           flatten : true,
-          src : '<%= globalConfig.bower_path %>/bootstrap/dist/js/bootstrap.min.js',
+          src : '<%= globalConfig.bower_path %>/bootswatch-dist/js/bootstrap.min.js',
           dest : '<%= globalConfig.scripts %>/',
           filter : 'isFile'
-        },/* {
+        }, {
           expand : true,
           flatten : true,
-          src : '<%= globalConfig.bower_path %>/bootstrap/dist/css/bootstrap.min.css',
+          src : '<%= globalConfig.bower_path %>/bootswatch-dist/css/bootstrap.min.css',
           dest : '<%= globalConfig.styles %>/',
           filter : 'isFile'
-        }*/ {
+        },
+        {
           expand : true,
           flatten : true,
           src : '<%= globalConfig.bower_path %>/font-awesome/css/font-awesome.min.css',
@@ -143,7 +150,6 @@ module.exports = function(grunt) {
 
   grunt.loadNpmTasks('grunt-contrib-copy');
   grunt.loadNpmTasks('grunt-contrib-uglify');
-  grunt.loadNpmTasks("grunt-modernizr");
   grunt.loadNpmTasks('grunt-contrib-less');
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-contrib-concat');
