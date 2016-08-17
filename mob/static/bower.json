@@ -1,7 +1,7 @@
 {
-  "name": "balu.of.by",
-  "version": "0.0.1",
-  "description": "balu.of.by project",
+  "name": "minecraft.of.by",
+  "version": "0.2.0",
+  "description": "minecraft.of.by project",
   "authors": [
     "Dmitry Vl. Rendov"
   ],
@@ -25,7 +25,7 @@
     "SyntaxHighlighter": "latest",
     "matchHeight": "latest"
   },
-  "homepage": "https://github.com/DmitryRendov/balu-site",
+  "homepage": "https://github.com/DmitryRendov/mob-site",
   "moduleType": [
     "globals",
     "node"

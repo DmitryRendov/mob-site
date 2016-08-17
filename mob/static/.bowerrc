@@ -1,5 +1,4 @@
 {
-  "directory" : "/home/dmitry/vhosts/minecraft.of.by/libraries",
   "json" : "bower.json",
   "endpoint" : "https://bower.herokuapp.com"
 }
