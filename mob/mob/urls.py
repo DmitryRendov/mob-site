@@ -15,7 +15,11 @@ Including another URLconf
 """
 from django.conf.urls import url
 from django.contrib import admin
+from django.contrib.flatpages import views
+import landpage.views
 
 urlpatterns = [
+    url(r'^$', landpage.views.index, name='index'),
     url(r'^admin/', admin.site.urls),
+    url(r'^(?P<url>.*/)$', views.flatpage),
 ]
