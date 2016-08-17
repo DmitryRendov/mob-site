@@ -3,7 +3,7 @@
 
 django-debug-toolbar==1.5
 
-html5lib==0.999999999
+html5lib
 six==1.10.0
 django-treebeard==4.0.1
 
