@@ -1,5 +1,3 @@
-#/home/dmitry/vhosts/minecraft.of.by/public_html/python-bin/local/lib/python2.7/site-packages/django
-
 #!/usr/bin/python
 
 """
@@ -16,8 +14,8 @@ framework.
 """
 
 import os, sys
-sys.path.append('/home/dmitry/vhosts/minecraft.of.by/public_html/python-bin/local/lib/python2.7/site-packages/django')
-sys.path.append('/home/dmitry/vhosts/minecraft.of.by/public_html/mob/')
+sys.path.append('/home/dmitry/vhosts/dev.minecraft.of.by/python-bin/lib/python2.7/site-packages/django')
+sys.path.append('/home/dmitry/vhosts/dev.minecraft.of.by/public_html/mob/')
 os.environ['DJANGO_SETTINGS_MODULE'] = 'mob.settings'
 
 # This application object is used by any WSGI server configured to use this

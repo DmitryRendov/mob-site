@@ -8,8 +8,7 @@ config = {
     'author': 'Dmitry Vl.Rendov',
     'url': 'http://minecraft.of.by',
     'author_email': 'drendov@gmail.com',
-    'version': ''
-               '1.1',
+    'version': '1.1',
     'install_requires': ['nose'],
     'packages': ['mob'],
     'scripts': [],

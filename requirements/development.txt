@@ -1,12 +1,11 @@
 # Local development dependencies go here
 -r base.txt
 
-django-debug-toolbar
+django-debug-toolbar==1.5
 
-html5lib==0.999
-six==1.3.0
-django-treebeard==3.0
+html5lib==0.999999999
+six==1.10.0
+django-treebeard==4.0.1
 
 # Optional, recommended packages
-Pillow>=2
-
+image==1.5.4
