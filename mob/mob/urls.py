@@ -21,5 +21,6 @@ import landpage.views
 urlpatterns = [
     url(r'^$', landpage.views.index, name='index'),
     url(r'^admin/', admin.site.urls),
+    url(r'^layout/', landpage.views.layout, name='layout'),
     url(r'^(?P<url>.*/)$', views.flatpage),
 ]
