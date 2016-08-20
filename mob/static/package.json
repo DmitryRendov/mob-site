@@ -1,7 +1,7 @@
 {
   "name": "minecraft-of-by",
   "version": "0.2.1",
-  "description": "Theme for minecraft.of.by project",
+  "description": "UI theme for minecraft.of.by project",
   "main": "package.json",
   "scripts": {
     "test": "grunt test"
@@ -27,7 +27,6 @@
     "grunt-contrib-jshint": "latest",
     "grunt-contrib-less": "latest",
     "grunt-contrib-uglify": "latest",
-    "grunt-contrib-watch": "latest",
-    "grunt-modernizr": "latest"
+    "grunt-contrib-watch": "latest"
   }
 }
