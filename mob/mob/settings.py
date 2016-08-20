@@ -83,7 +83,7 @@ WSGI_APPLICATION = 'mob.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'django_reg',
+        'NAME': 'mob_site',
         'USER': 'django',
         'PASSWORD': '111',
         'HOST': '127.0.0.1',    }
