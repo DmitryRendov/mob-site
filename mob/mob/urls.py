@@ -19,6 +19,7 @@ from django.contrib.flatpages import views
 
 urlpatterns = [
     url(r'^', include('landpage.urls', namespace='landpage')),
+    url(r'^library/', include('library.urls', namespace='library')),
     url(r'^admin/', admin.site.urls),
     url(r'^(?P<url>.*/)$', views.flatpage),
 ]
