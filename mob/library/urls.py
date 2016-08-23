@@ -11,13 +11,14 @@ urlpatterns = [
     ),
 
     url(
-        regex=r'^(?P<pk>\d+)/$',
+        regex=r'^(?P<slug>[-\w]+)/$',
         view=views.ArticleDetailView.as_view(),
         name='article_detail'
     ),
 
-    url (r'^categories/$',
-        views.CategoryView.as_view(),
+    url(
+        regex=r'^categories/$',
+        view=views.CategoryView.as_view(),
         name='category_list'
     ),
 ]

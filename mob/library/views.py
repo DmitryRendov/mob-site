@@ -12,7 +12,7 @@ logging.basicConfig(level=logging.DEBUG, format='%(asctime)s - %(levelname)s - %
 
 class ArticleDetailView(DetailView):
 	model = Article
-	template_name = "article.html"
+	template_name = "article_details.html"
 
 class ArticleListView(ListView):
 	model = Article

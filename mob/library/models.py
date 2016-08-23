@@ -59,14 +59,12 @@ class Article(models.Model):
     def __unicode__(self):
         return u'%s' % self.title
 
-    #@permalink
     def get_absolute_url(self):
-        return reverse('article_detail', kwargs={
-            'pk': self.pk,
+        return reverse('library:article_detail', kwargs={
+            'slug': self.slug,
             'year': self.publish.year,
             'month': self.publish.strftime('%b').lower(),
-            'day': self.publish.day,
-            'slug': self.slug
+            'day': self.publish.day
         })
 
     def get_previous_article(self):

@@ -9,29 +9,22 @@
 
             <!-- Blog Entries Column -->
             <div class="col-md-8">
+             <h2>{{ object.title }}</h2>
 
-                <h2>Publishers</h2>
-                <div class="list article_list">
-                    {% for article in object_list %}
-                    <div class="item">
-                      <h3 class="title"><a href="{% url 'library:article_detail' article.slug %}" title="{% trans "View this article" %}">{{ article.title }}</a></h3>
-                      <p class="date">{{ article.publish|date:"d F Y" }}</p>
-                      <p class="intro">{{ article.intro|safe }}</p>
-                    </div>
-                    {% endfor %}
-                  </div>
-                  
-                  {% if is_paginated %}
-                  <p class="pagination">
-                    {% if has_next %}
-                    <a class="older" href="?page={{ next }}" title="{% trans "View older articles" %}">{% trans "Older" %}</a>
-                    {% endif %}
-                    {% if has_next and has_previous %} | {% endif %}
-                    {% if has_previous %}
-                    <a class="newer" href="?page={{ previous }}" title="{% trans "View newer articles" %}">{% trans "Newer" %}</a>
-                    {% endif %}
-                  </p>
-                  {% endif %}
+              <p class="date">{{ object.publish|date:"j F Y" }}</p>
+
+              <div class="body">
+                {{ object.body|safe }}
+              </div>
+
+              <p class="other_posts">
+                {% if object.get_previous_by_publish %}
+                <a class="previous" href="{{ object.get_previous_post.get_absolute_url }}" title="{% trans "View previous post" %}">&laquo; {{ object.get_previous_post }}</a>
+                {% endif %}
+                {% if object.get_next_by_publish %}
+                | <a class="next" href="{{ object.get_next_post.get_absolute_url }}" title="{% trans "View next post" %}">{{ object.get_next_post }} &raquo;</a>
+                {% endif %}
+              </p>
 
             </div>
 
