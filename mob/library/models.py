@@ -3,6 +3,7 @@ from __future__ import unicode_literals
 from django.db import models
 from django.utils.translation import ugettext_lazy as _
 from django.db.models import permalink
+from django.core.urlresolvers import reverse
 from django.contrib.auth.models import User
 from django.conf import settings
 
@@ -58,9 +59,10 @@ class Article(models.Model):
     def __unicode__(self):
         return u'%s' % self.title
 
-    @permalink
+    #@permalink
     def get_absolute_url(self):
-        return ('library_detail', None, {
+        return reverse('article_detail', kwargs={
+            'pk': self.pk,
             'year': self.publish.year,
             'month': self.publish.strftime('%b').lower(),
             'day': self.publish.day,

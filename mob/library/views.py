@@ -1,7 +1,7 @@
 # coding=utf-8
 from django.shortcuts import render
 from django.template import RequestContext
-from django.views.generic import TemplateView, ListView
+from django.views.generic import DetailView, TemplateView, ListView
 from django.utils.translation import ugettext, ugettext_lazy as _
 from .models import Article, Category
 
@@ -10,12 +10,14 @@ import logging
 logging.basicConfig(level=logging.DEBUG, format='%(asctime)s - %(levelname)s - %(message)s')
 # end of debug
 
-class ArticleView(TemplateView):
+class ArticleDetailView(DetailView):
 	model = Article
-	queryset = Article.objects.all()
-	paginate_by = 5
-	template_name = "article_details.html"
+	template_name = "article.html"
+
+class ArticleListView(ListView):
+	model = Article
+	template_name = "article_list.html"
 
 class CategoryView(TemplateView):
 	model = Category
-	template_name = "category.html"
+	template_name = "category_list.html"
