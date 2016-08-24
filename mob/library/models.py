@@ -1,3 +1,4 @@
+# coding=utf-8
 from __future__ import unicode_literals
 
 from django.db import models
@@ -72,3 +73,8 @@ class Article(models.Model):
 
     def get_next_article(self):
         return self.get_next_by_publish(status__gte=2)
+
+    def display_categories(self):
+        return ', '.join([ category.title for category in self.categories.all()[:5] ])
+    display_categories.short_description = 'Categories'
+    display_categories.allow_tags = True
