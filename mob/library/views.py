@@ -3,6 +3,7 @@ from django.shortcuts import render
 from django.template import RequestContext
 from django.views.generic import DetailView, TemplateView, ListView
 from django.utils.translation import ugettext, ugettext_lazy as _
+from django.conf import settings
 from .models import Article, Category
 
 ## Only for debug
@@ -17,6 +18,7 @@ class ArticleDetailView(DetailView):
 class ArticleListView(ListView):
 	model = Article
 	template_name = "article_list.html"
+	paginate_by = getattr(settings, 'LIBRARY_PAGESIZE')
 
 class CategoryView(TemplateView):
 	model = Category

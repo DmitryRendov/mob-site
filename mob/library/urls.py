@@ -17,6 +17,12 @@ urlpatterns = [
     ),
 
     url(
+        regex=r'^page/(?P<page>\d+)/$',
+        view=views.ArticleListView.as_view(),
+        name='article_list'
+    ),
+
+    url(
         regex=r'^categories/$',
         view=views.CategoryView.as_view(),
         name='category_list'
