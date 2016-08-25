@@ -10,7 +10,6 @@
             <!-- Blog Entries Column -->
             <div class="col-md-8">
 
-                <h2>Publishers</h2>
                 <div class="list article_list">
                     {% for article in object_list %}
                     <div class="item">
@@ -19,17 +18,41 @@
                       <p class="intro">{{ article.intro|safe }}</p>
                     </div>
                     {% endfor %}
-                  </div>
+                </div>
                   
-                  {% if is_paginated %}
-                  <p class="pagination">
+                {% if is_paginated %}
+                <nav aria-label="Page navigation">
+                  <ul class="pagination">
                     {% if page_obj.has_previous %}
-                    <a class="newer" href="?page={{ page_obj.previous_page_number }}" title="{% trans "View newer articles" %}">{% trans "Newer" %}</a> | {% endif %}
-                    Page {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}
-                    {% if page_obj.has_next %} | <a class="older" href="?page={{ page_obj.next_page_number }}" title="{% trans "View older articles" %}">{% trans "Older" %}</a>
+                    <li>
+                      <a href="?page={{ page_obj.previous_page_number }}" aria-label="{% trans "View newer articles" %}">
+                        <span aria-hidden="true">&laquo;</span>
+                      </a>
+                    </li>
+                    {% else %}
+                     <li class="disabled"><a href="#" aria-label="{% trans "View newer articles" %}"><span aria-hidden="true">&laquo;</span></a></li>
                     {% endif %}
-                  </p>
-                  {% endif %}
+
+                    {% for pagenum in page_obj.paginator.page_range %}
+                        {% ifequal pagenum page_obj.number %}
+                        <li class="active"><a href="?page={{ pagenum }}">{{ pagenum }}</a></li>
+                        {% else %}
+                        <li><a href="?page={{ pagenum }}">{{ pagenum }}</a></li>
+                        {% endifequal %}
+                    {% endfor %}
+
+                    {% if page_obj.has_next %}
+                    <li>
+                      <a href="?page={{ page_obj.next_page_number }}" aria-label="{% trans "View older articles" %}">
+                        <span aria-hidden="true">&raquo;</span>
+                      </a>
+                    </li>
+                    {% else %}
+                     <li class="disabled"><a href="#" aria-label="{% trans "View older articles" %}"><span aria-hidden="true">&raquo;</span></a></li>
+                    {% endif %}
+                  </ul>
+                </nav>
+                {% endif %}
 
             </div>
 

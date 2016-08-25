@@ -7,4 +7,7 @@ $(function() {
         }, 1500, 'easeInOutExpo');
         event.preventDefault();
     });
+    $('img').error(function(){
+		$(this).attr('src', '/static/img/image-not-found.png');
+	});
 }); 
