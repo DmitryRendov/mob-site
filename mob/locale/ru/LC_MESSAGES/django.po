@@ -1,0 +1,226 @@
+# MOB-site lang packcage
+# Copyright (C) 2016
+# This file is distributed under the same license as the MOB-site package
+# Dmitry Rendov, 2016.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: mob-site\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-08-27 19:51+0300\n"
+"PO-Revision-Date: 2016-21-31 23:59+0300\n"
+"Last-Translator: Dmitry Rendov <admin@minecraft.of.by>\n"
+"Language-Team: Dmitry Rendov <admin@minecraft.of.by>\n"
+"Language: ru\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || (n"
+"%100>=11 && n%100<=14)? 2 : 3);\n"
+
+#: library/apps.py:9
+msgid "library"
+msgstr "библиотека"
+
+#: library/models.py:16 library/models.py:39
+msgid "title"
+msgstr "название"
+
+#: library/models.py:17 library/models.py:40
+msgid "slug"
+msgstr "псевдоним"
+
+#: library/models.py:20
+msgid "category"
+msgstr "категория"
+
+#: library/models.py:21 library/models.py:79
+msgid "categories"
+msgstr "категории"
+
+#: library/models.py:36
+msgid "Draft"
+msgstr "черновик"
+
+#: library/models.py:37
+msgid "Public"
+msgstr "опубликован"
+
+#: library/models.py:42
+msgid "body"
+msgstr "тело"
+
+#: library/models.py:43
+msgid "intro"
+msgstr "вступление"
+
+#: library/models.py:43
+msgid "Inroduction text"
+msgstr "Текст вступления"
+
+#: library/models.py:44
+msgid "status"
+msgstr "статус"
+
+#: library/models.py:45
+msgid "allow comments"
+msgstr "комментарии разрешены"
+
+#: library/models.py:46
+msgid "publish"
+msgstr "опубликован"
+
+#: library/models.py:47
+msgid "created"
+msgstr "создано"
+
+#: library/models.py:48
+msgid "modified"
+msgstr "модифицировано"
+
+#: library/models.py:54
+msgid "article"
+msgstr "статья"
+
+#: library/models.py:55
+msgid "articles"
+msgstr "статьи"
+
+#: library/templates/article_list.html:16
+msgid "View this article"
+msgstr "Просмотреть статью"
+
+#: library/templates/article_list.html:28
+#: library/templates/article_list.html:33
+msgid "View newer articles"
+msgstr "Просмотреть более новую статью"
+
+#: library/templates/article_list.html:46
+#: library/templates/article_list.html:51
+msgid "View older articles"
+msgstr "Просмотреть более старую статью"
+
+#: loginsys/models.py:25
+msgid "The given username must be set"
+msgstr ""
+
+#: loginsys/models.py:54
+msgid "username"
+msgstr ""
+
+#: loginsys/models.py:56
+msgid ""
+"Required. 30 characters or fewer. Letters, numbers and @/./+/-/_ characters"
+msgstr ""
+
+#: loginsys/models.py:58
+msgid "Enter a valid username."
+msgstr ""
+
+#: loginsys/models.py:59
+msgid "invalid"
+msgstr ""
+
+#: loginsys/models.py:61
+msgid "first name"
+msgstr ""
+
+#: loginsys/models.py:62
+msgid "last name"
+msgstr ""
+
+#: loginsys/models.py:63
+msgid "email address"
+msgstr ""
+
+#: loginsys/models.py:64
+msgid "staff status"
+msgstr ""
+
+#: loginsys/models.py:65
+msgid "Designates whether the user can log into this admin site."
+msgstr ""
+
+#: loginsys/models.py:66
+msgid "active"
+msgstr ""
+
+#: loginsys/models.py:68
+msgid ""
+"Designates whether this user should be treated as active. Unselect this "
+"instead of deleting accounts."
+msgstr ""
+
+#: loginsys/models.py:71
+msgid "date joined"
+msgstr ""
+
+#: loginsys/models.py:72
+msgid "date of birth"
+msgstr ""
+
+#: loginsys/models.py:74
+msgid "IP address"
+msgstr ""
+
+#: loginsys/models.py:75
+msgid "Last login"
+msgstr ""
+
+#: loginsys/models.py:76
+msgid "X coord"
+msgstr ""
+
+#: loginsys/models.py:77
+msgid "Y coord"
+msgstr ""
+
+#: loginsys/models.py:78
+msgid "Z coord"
+msgstr ""
+
+#: loginsys/models.py:79
+msgid "World name"
+msgstr ""
+
+#: loginsys/models.py:80
+msgid "Is logged user"
+msgstr ""
+
+#: loginsys/models.py:81
+msgid "Realname"
+msgstr ""
+
+#: loginsys/models.py:91
+msgid "user"
+msgstr ""
+
+#: loginsys/models.py:92
+msgid "users"
+msgstr ""
+
+#: loginsys/views.py:75
+msgid "Ваш Ник"
+msgstr ""
+
+#: loginsys/views.py:77
+msgid "Пароль"
+msgstr ""
+
+#: loginsys/views.py:78
+msgid "Повтори пароль"
+msgstr ""
+
+#: loginsys/views.py:79
+msgid "Email"
+msgstr ""
+
+#: loginsys/views.py:136
+msgid "Account confirmation"
+msgstr ""
+
+#: mob/settings.py:130
+msgid "Russian"
+msgstr ""
