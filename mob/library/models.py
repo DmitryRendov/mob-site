@@ -76,5 +76,5 @@ class Article(models.Model):
 
     def display_categories(self):
         return ', '.join([ category.title for category in self.categories.all()[:5] ])
-    display_categories.short_description = 'Categories'
+    display_categories.short_description = _('categories')
     display_categories.allow_tags = True

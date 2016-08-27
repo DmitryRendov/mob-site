@@ -10,7 +10,7 @@
             <!-- Blog Entries Column -->
             <div class="col-md-8">
                 <h2>{{ object.title }}</h2>
-                <p class="date">{{ object.publish|date:"j F Y" }}</p>
+                <p class="date">{{ object.publish|date:"j F Y, H:i" }}</p>
 
                 <div class="body">
                     <p class="lead"> {{ object.intro|safe }}</p>
@@ -34,26 +34,7 @@
             <!-- Blog Sidebar Widgets Column -->
             <div class="col-md-4 sidebar">
 
-                <!-- Blog Search Well -->
-                <div class="well">
-                    <h4>Blog Search</h4>
-                    <div class="input-group">
-                        <input type="text" class="form-control">
-                        <span class="input-group-btn">
-                            <button class="btn btn-default" type="button">
-                                <span class="glyphicon glyphicon-search"></span>
-                        </button>
-                        </span>
-                    </div>
-                    <!-- /.input-group -->
-                </div>
-
-
-                <!-- Side Widget Well -->
-                <div class="well">
-                    <h4>Side Widget Well</h4>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore, perspiciatis adipisci accusamus laudantium odit aliquam repellat tempore quos aspernatur vero.</p>
-                </div>
+                {% include "sidebar.html" %}
 
             </div>
 

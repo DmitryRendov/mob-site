@@ -16,9 +16,15 @@ class ArticleDetailView(DetailView):
 	template_name = "article_details.html"
 
 class ArticleListView(ListView):
-	model = Article
 	template_name = "article_list.html"
 	paginate_by = getattr(settings, 'LIBRARY_PAGESIZE')
+
+	def get_queryset(self):
+		if self.request.user.is_superuser:
+			queryset = Article.objects.all()
+		else:
+			queryset = Article.objects.filter(status__gte=2)
+			return queryset
 
 class CategoryView(TemplateView):
 	model = Category
