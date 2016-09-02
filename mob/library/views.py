@@ -1,6 +1,7 @@
 # coding=utf-8
 from django.shortcuts import render
 from django.template import RequestContext
+from django.core.exceptions import PermissionDenied
 from django.views.generic import DetailView, TemplateView, ListView
 from django.utils.translation import ugettext, ugettext_lazy as _
 from django.conf import settings
@@ -15,6 +16,12 @@ class ArticleDetailView(DetailView):
 	model = Article
 	template_name = "article_details.html"
 
+	def get_object(self):
+		object = super(ArticleDetailView, self).get_object()
+		if not object.is_published() and not self.request.user.is_staff:
+			raise PermissionDenied
+		return object
+
 class ArticleListView(ListView):
 	template_name = "article_list.html"
 	paginate_by = getattr(settings, 'LIBRARY_PAGESIZE')
@@ -24,7 +31,7 @@ class ArticleListView(ListView):
 			queryset = Article.objects.all()
 		else:
 			queryset = Article.objects.filter(status__gte=2)
-			return queryset
+		return queryset
 
 class CategoryView(TemplateView):
 	model = Category
