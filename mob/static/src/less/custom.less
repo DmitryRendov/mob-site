@@ -25,3 +25,64 @@ blockquote {
 .thumbnail {
     margin-bottom: 0;
 }
+
+
+
+
+.title p {
+    transition: all 0.7s ease-out 0.5s;
+    text-align: center;
+    font-size: 1.4em;
+    font-weight: 400;
+    line-height: 1.4737;
+    margin: 0 0 0.75em;
+    color: #8a9599;
+}
+
+.title h2 {
+    text-transform: uppercase;
+}
+
+.sep-container {
+    position: relative;
+    text-align: center;
+}
+
+.sep-container .sep {
+    color: #c5a47e;
+    margin: 0 auto 1em;
+    width: 11em;
+}
+
+.sep-container .sep.line-sep::before {
+    float: left;
+}
+
+.sep-container .sep.line-sep::after {
+    float: right;
+}
+
+.sep-container .sep.line-sep::before, .sep-container .sep.line-sep::after {
+    border: 1px solid #c5a47e;
+    content: " ";
+    display: block;
+    margin-top: 11px;
+    width: 40%;
+}
+
+.faq-section .item {
+    border-radius: 2px;
+    padding: 10px;
+}
+.faq-section .item h3 {
+    font-size: 20px;
+    font-style: italic;
+    font-weight: 400;
+}
+.faq-section .item p {
+    font-size: 15px;
+}
+
+.colored-text {
+    color: #00aeff;
+}
