@@ -74,7 +74,10 @@ class Article(models.Model):
     def get_next_article(self):
         return self.get_next_by_publish(status__gte=2)
 
+    def is_published(self):
+        return self.status > 1
+
     def display_categories(self):
         return ', '.join([ category.title for category in self.categories.all()[:5] ])
-    display_categories.short_description = 'Categories'
+    display_categories.short_description = _('categories')
     display_categories.allow_tags = True

@@ -1,0 +1,96 @@
+{% extends "base.html" %}
+{% load flatpages %}
+
+{% block base_content %}
+<!-- Page Content -->
+<div class="container">
+    <div class="row">
+
+        <!-- Intro Section -->
+        <section id="intro" class="intro-section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <!-- Page Content -->
+                        <div class="container">
+
+                            <!-- Heading Row -->
+                            <div class="row">
+                                <div class="col-md-7 header-splash">
+                                    <img class="img-responsive img-rounded" src="/media/mob-splash03.jpg" alt="">
+                                </div>
+                                <!-- /.col-md-8 -->
+                                <div class="col-md-5">
+                                    <h1>Майнкрафт в Беларуси</h1>
+                                    <p class="lead"> Семейный сервер для безопасной игры ваших детей, комфортного времяпрепровождения взрослых и дружеского общения в тесном комьюнити.</p>
+                                    <h4>Чем мы отличаемся от других:</h4>
+                                    <ul>
+                                        <li>наш сервер&nbsp;&mdash; <span class="text-info">без доната, без продажи админок, креатива;</span>;</li>
+                                        <li>у нас вне закона матерящееся "школоло", "гриферы" и неадекватные игроки;</li>
+                                        <li>у нас есть <span class="text-info">Проекты&nbsp;&mdash; глобальные стройки объединённые одной идеей</span>;</li>
+                                        <li>мы экспортируем твои выдающиеся постройки, если ты вдруг решишь покинуть нас;</li>
+                                    </ul>
+                                    <p class="lead">Мы рады видеть тебя на нашем сервере и постараемся сделать всё возможное, чтобы ты запомнил нас и всегда возвращался к нам поиграть.</p>
+
+                                </div>
+                                <!-- /.col-md-4 -->
+                            </div>
+                            <!-- /.row -->
+
+                            <hr>
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <div class="well text-center">
+                                        <strong class="colored-text">Основная идея сервера</strong>&nbsp;&mdash; развитие творческих способностей ваших детей и площадка для взрослых, которые в детстве не доиграли в кубики/лего/песочницу.
+                                    </div>
+                                </div>
+                                <!-- /.col-lg-12 -->
+                            </div>
+                            <!-- /.row -->
+
+                        </div>
+                        <!-- /.container -->
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="about-section">
+            {% include "about.html" %}
+        </section>
+
+        <!-- HowToPlay Section -->
+        <section id="howtoplay" class="howtoplay-section">
+            {% include "howtoplay.html" %}
+        </section>
+
+        <!-- F.A.Q Section -->
+        <section id="faq" class="faq-section">
+            {% include "faq.html" %}
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="projects-section">
+           {% include "projects.html" %}
+        </section>
+
+    </div>
+</div>
+
+{% endblock %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

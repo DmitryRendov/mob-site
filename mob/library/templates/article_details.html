@@ -9,48 +9,32 @@
 
             <!-- Blog Entries Column -->
             <div class="col-md-8">
-             <h2>{{ object.title }}</h2>
+                <h2>{{ object.title }}</h2>
+                <p class="date">{{ object.publish|date:"j F Y, H:i" }}</p>
 
-              <p class="date">{{ object.publish|date:"j F Y" }}</p>
+                <div class="body">
+                    <p class="lead"> {{ object.intro|safe }}</p>
+                    <hr />
+                    {{ object.body|safe }}
+                </div>
 
-              <div class="body">
-                {{ object.body|safe }}
-              </div>
 
-              <p class="other_articles">
-                {% if object.get_previous_by_publish %}
-                <a class="previous" href="{% url 'library:article_detail' object.get_previous_article.slug %}" title="{% trans "View previous article" %}">&laquo; {{ object.get_previous_article }}</a>
-                {% endif %}
-                {% if object.get_next_by_publish and object.get_next_article.slug %}
-                | <a class="next" href="{% url 'library:article_detail' object.get_next_article.slug %}" title="{% trans "View next article" %}">{{ object.get_next_article }} &raquo;</a>
-                {% endif %}
-              </p>
+                <nav aria-label="other_articles">
+                    <ul class="pager">
+                        {% if object.get_previous_by_publish %}
+                        <li class="previous"><a href="{% url 'library:article_detail' object.get_previous_article.slug %}"><span aria-hidden="true">&larr;</span> {{ object.get_previous_article }} </a></li>{% endif %}
+
+                        {% if object.get_next_by_publish and object.get_next_article.slug %}
+                        <li class="next"><a href="{% url 'library:article_detail' object.get_next_article.slug %}">{{ object.get_next_article }} <span aria-hidden="true">&rarr;</span></a></li>{% endif %}
+                    </ul>
+                </nav>
 
             </div>
 
             <!-- Blog Sidebar Widgets Column -->
             <div class="col-md-4 sidebar">
 
-                <!-- Blog Search Well -->
-                <div class="well">
-                    <h4>Blog Search</h4>
-                    <div class="input-group">
-                        <input type="text" class="form-control">
-                        <span class="input-group-btn">
-                            <button class="btn btn-default" type="button">
-                                <span class="glyphicon glyphicon-search"></span>
-                        </button>
-                        </span>
-                    </div>
-                    <!-- /.input-group -->
-                </div>
-
-
-                <!-- Side Widget Well -->
-                <div class="well">
-                    <h4>Side Widget Well</h4>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore, perspiciatis adipisci accusamus laudantium odit aliquam repellat tempore quos aspernatur vero.</p>
-                </div>
+                {% include "sidebar.html" %}
 
             </div>
 

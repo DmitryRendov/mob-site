@@ -6,13 +6,19 @@
     <div class="container">
         <div class="row">
 
-            <!-- Blog Entries Column -->
+            <!-- Flatpage content -->
             <div class="col-md-8">
                 <h2>{{ flatpage.title }}</h2>
                 <p>by <a href="/users/mob-admin/">MoB Admin</a></p>
                 {{ flatpage.content }}
             </div>
 
+            <!-- Blog Sidebar Widgets Column -->
+            <div class="col-md-4 sidebar">
+
+                {% include "sidebar.html" %}
+
+            </div>
 
         </div><!-- /.row -->
     </div>
