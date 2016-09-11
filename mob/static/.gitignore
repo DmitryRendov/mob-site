@@ -4,7 +4,7 @@ css/
 fonts/
 cms/
 djangocms_admin_style/
-libraries/
+bower_components/
 node_modules/
 djangocms_text_ckeditor/
 index.html
