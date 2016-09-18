@@ -51,11 +51,22 @@ module.exports = function(grunt) {
         }, {
           expand : true,
           flatten : true,
+          src : '<%= globalConfig.bower_path %>/lightbox2/dist/js/lightbox.min.js',
+          dest : '<%= globalConfig.scripts %>/',
+          filter : 'isFile'
+        }, {
+          expand : true,
+          flatten : true,
+          src : '<%= globalConfig.bower_path %>/respond/dest/respond.min.js',
+          dest : '<%= globalConfig.scripts %>/',
+          filter : 'isFile'
+        }, {
+          expand : true,
+          flatten : true,
           src : '<%= globalConfig.bower_path %>/bootswatch-dist/css/bootstrap.min.css',
           dest : '<%= globalConfig.styles %>/',
           filter : 'isFile'
-        },
-        {
+        }, {
           expand : true,
           flatten : true,
           src : '<%= globalConfig.bower_path %>/font-awesome/css/font-awesome.min.css',
@@ -66,12 +77,6 @@ module.exports = function(grunt) {
           flatten : true,
           src : '<%= globalConfig.bower_path %>/font-awesome/fonts/*',
           dest : '<%= globalConfig.fonts %>/',
-          filter : 'isFile'
-        }, {
-          expand : true,
-          flatten : true,
-          src : '<%= globalConfig.bower_path %>/respond/dest/respond.min.js',
-          dest : '<%= globalConfig.scripts %>/',
           filter : 'isFile'
         }]
       }

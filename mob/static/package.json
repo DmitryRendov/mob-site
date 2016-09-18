@@ -1,6 +1,6 @@
 {
   "name": "minecraft-of-by",
-  "version": "0.2.1",
+  "version": "1.0.1",
   "description": "UI theme for minecraft.of.by project",
   "main": "package.json",
   "scripts": {
