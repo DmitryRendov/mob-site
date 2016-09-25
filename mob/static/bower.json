@@ -1,6 +1,6 @@
 {
   "name": "minecraft.of.by",
-  "version": "0.2.1",
+  "version": "1.0.1",
   "description": "minecraft.of.by project",
   "authors": [
     "Dmitry Vl. Rendov"
@@ -23,7 +23,8 @@
     "html5shiv": "latest",
     "respond": "latest",
     "SyntaxHighlighter": "latest",
-    "matchHeight": "latest"
+    "matchHeight": "latest",
+    "lightbox2": "latest"
   },
   "homepage": "https://github.com/DmitryRendov/mob-site",
   "moduleType": [
