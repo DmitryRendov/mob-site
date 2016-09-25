@@ -32,8 +32,9 @@
                         <li><a class="page-scroll" href="/library/how-to-setup-minecraft/">Как установить игру Майнкрафт?</a></li>
                         <li class="divider"></li>
                         <li><a href="/game-rules/">Правила сервера</a></li>
-                        <!-- <li class="divider"></li>
-                        <li><a href="/forums/">Курилка</a></li> -->
+                        <li class="divider"></li>
+                        <li><a href="/map/">Карта сервера</a></li>
+                        <!-- <li><a href="/forums/">Курилка</a></li> -->
                     </ul>
                 </li>
                 <li>
@@ -44,7 +45,7 @@
                 {% if user.is_authenticated %}
                 <li><a href="/auth/logout/">Выйти { {{ user.username }} }</a></li>
                 {% else %}
-                <li><a href="/auth/login/">Войти</a></li>
+                <li><a href="/admin/">Войти</a></li>
                 {% endif %}
             </ul>
         </div>
