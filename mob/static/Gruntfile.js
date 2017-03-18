@@ -1,7 +1,7 @@
 /*
  * Gruntfile.js
  *
- * Copyright (c) 2016 Dmitry Vl. Rendov
+ * Copyright (c) 2016-2017 Dmitry Vl. Rendov
  * Licensed under the MIT license.
  * https://github.com/DmitryRendov/mob-site/blob/master/LICENSE
  */
@@ -78,7 +78,13 @@ module.exports = function(grunt) {
           src : '<%= globalConfig.bower_path %>/font-awesome/fonts/*',
           dest : '<%= globalConfig.fonts %>/',
           filter : 'isFile'
-        }]
+        }, {
+          expand : true,
+          flatten : true,
+          src : '<%= globalConfig.bower_path %>/glyphicons-only-bootstrap/fonts/*',
+          dest : '<%= globalConfig.fonts %>/',
+          filter : 'isFile'
+       }]
       }
     },
     clean : {
@@ -125,7 +131,7 @@ module.exports = function(grunt) {
     },
     concat : {
       dist : {
-        src : ['<%= globalConfig.src %>/js/**/*.js'],
+        src : ['<%= globalConfig.src %>/js/**/*.js', '!<%= globalConfig.src %>/js/**/ga.js'],
         dest : '<%= globalConfig.scripts %>/app.js',
         options : {
           banner : ";(function( window, undefined ){ \n 'use strict'; \n",

@@ -24,7 +24,8 @@
     "respond": "latest",
     "SyntaxHighlighter": "latest",
     "matchHeight": "latest",
-    "lightbox2": "latest"
+    "lightbox2": "latest",
+    "glyphicons-only-bootstrap": "latest"
   },
   "homepage": "https://github.com/DmitryRendov/mob-site",
   "moduleType": [
