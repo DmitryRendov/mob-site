@@ -63,6 +63,12 @@ module.exports = function(grunt) {
         }, {
           expand : true,
           flatten : true,
+          src : '<%= globalConfig.src %>/js/ga.js',
+          dest : '<%= globalConfig.scripts %>/',
+          filter : 'isFile'
+        }, {
+          expand : true,
+          flatten : true,
           src : '<%= globalConfig.bower_path %>/bootswatch-dist/css/bootstrap.min.css',
           dest : '<%= globalConfig.styles %>/',
           filter : 'isFile'
