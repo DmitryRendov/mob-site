@@ -18,4 +18,19 @@ $(function() {
     var r = e + '@' + t + n;
     $(".hide-email").attr('href','mailto:' + r).html(r);
 
+
+    var containerEl = document.querySelector('.mob-projects');
+    var mixer = mixitup(containerEl, {
+            classNames: {
+                block: 'mob-projects',
+                elementFilter: 'controls',
+            },
+            load: {
+                sort: 'published-date:desc'
+            },
+            animation: {
+                effects: 'fade translateZ(-100px)'
+            }
+        });
+
 }); 
