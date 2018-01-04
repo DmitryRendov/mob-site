@@ -82,16 +82,15 @@ mob-projects-controls-active {
 }
 
 .mix figcaption {
-    height: 110px;
+    height: 120px;
     width: 100%;
     top: auto;
-    bottom: 0;
-    opacity: 0;
+    bottom: 20px;
     z-index:99;
-    -webkit-transform: translateY(100%);
-    -moz-transform: translateY(100%);
-    -ms-transform: translateY(100%);
-    transform: translateY(100%);
+    -webkit-transform: translateY(85%);
+    -moz-transform: translateY(85%);
+    -ms-transform: translateY(85%);
+    transform: translateY(85%);
     -webkit-transition: -webkit-transform 0.4s, opacity 0.1s 0.3s;
     -moz-transition: -moz-transform 0.4s, opacity 0.1s 0.3s;
     transition: transform 0.4s, opacity 0.1s 0.3s;
@@ -100,10 +99,10 @@ mob-projects-controls-active {
 .mix figure:hover figcaption,
 .mix figure.cs-hover figcaption {
     opacity: 1;
-    -webkit-transform: translateY(10px);
-    -moz-transform: translateY(10px);
-    -ms-transform: translateY(10px);
-    transform: translateY(10px);
+    -webkit-transform: translateY(20px);
+    -moz-transform: translateY(20px);
+    -ms-transform: translateY(20px);
+    transform: translateY(20px);
     -webkit-transition: -webkit-transform 0.4s, opacity 0.1s;
     -moz-transition: -moz-transform 0.4s, opacity 0.1s;
     transition: transform 0.4s, opacity 0.1s;
@@ -111,8 +110,8 @@ mob-projects-controls-active {
 
 .mix figcaption a {
     position: absolute;
-    bottom: 20px;
-    right: 20px;
+    bottom: 85px;
+    right: 7px;
 }
 
 .mix figcaption h3 {
@@ -128,7 +127,7 @@ mob-projects-controls-active {
     text-align:center;
     border-radius:100%;
     left:35%;
-    top:20%;
+    top:22%;
 }
 .view_link i{
     display:inline-block;
@@ -145,7 +144,7 @@ mob-projects-controls-active {
     text-align:center;
     border-radius:100%;
     left:45%;
-    top:20%;
+    top:22%;
 }
 .goto_link i{
     display:inline-block;
@@ -168,7 +167,6 @@ mob-projects-controls-active {
     width: 100%;
     top: auto;
     bottom: 0;
-    opacity: 0;
     position:absolute;
     -webkit-transform: translateY(100%);
     -moz-transform: translateY(100%);
@@ -190,4 +188,42 @@ mob-projects-controls-active {
     -webkit-transition: -webkit-transform 0.4s, opacity 0.1s;
     -moz-transition: -moz-transform 0.4s, opacity 0.1s;
     transition: transform 0.4s, opacity 0.1s;
+}
+
+/* Portrait phones and smaller */
+@media (max-width: 480px) {
+    .view_link{
+        width:40px;
+        height:40px;
+        float:left;
+        background:#fff;
+        position:relative;
+        text-align:center;
+        border-radius:100%;
+        left:35%;
+        top:5%;
+    }
+    .view_link i{
+        display:inline-block;
+        font-size:20px;
+        color:#00bfe8;
+        margin-top:11px;
+    }
+    .goto_link{
+        width:40px;
+        height:40px;
+        float:left;
+        background:#fff;
+        position:relative;
+        text-align:center;
+        border-radius:100%;
+        left:45%;
+        top:5%;
+    }
+    .goto_link i{
+        display:inline-block;
+        font-size:20px;
+        color:#00bfe8;
+        margin-top:11px;
+    }
 }
