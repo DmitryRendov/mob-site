@@ -1,0 +1,3 @@
+User-agent: Yandex
+Disallow:
+Host: xn--80ashg.xn--90ais
