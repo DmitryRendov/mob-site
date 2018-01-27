@@ -82,6 +82,7 @@ mob/static/js/
 mob/static/css/
 mob/static/fonts/
 mob/static/index.html
+mob/accounts/
 
 #system directives
 .htaccess
