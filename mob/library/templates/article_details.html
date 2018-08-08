@@ -20,6 +20,10 @@
                     {{ object.body|safe }}
                 </div>
 
+                {% if object.is_comments_allowed %}
+                        <h4>Комментарии:</h4>
+                         {% include "show_comments.html" with slug=object.slug %}
+                {% endif %}
 
                 <nav aria-label="other_articles">
                     <ul class="pager">

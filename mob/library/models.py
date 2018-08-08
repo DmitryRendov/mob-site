@@ -77,6 +77,9 @@ class Article(models.Model):
     def is_published(self):
         return self.status > 1
 
+    def is_comments_allowed(self):
+        return self.allow_comments
+
     def display_categories(self):
         return ', '.join([ category.title for category in self.categories.all()[:5] ])
     display_categories.short_description = _('categories')
