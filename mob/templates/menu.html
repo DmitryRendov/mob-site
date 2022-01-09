@@ -23,13 +23,21 @@
                 <li>
                     <a class="page-scroll" href="{% if not current_page.is_home %}/{% endif %}#faq">FAQ</a>
                 </li>
-                <li>
-                    <a class="page-scroll" href="/map/">карта</a>
+                <li class="dropdown">
+                    <a aria-expanded="false" role="button" data-toggle="dropdown" class="dropdown-toggle"
+                       href="/map/">карта <span class="caret"></span></a>
+                    <ul role="menu" class="dropdown-menu">
+                        <li><a class="page-scroll" href="/survival/">Карта Выживания</a></li>
+                        <li><a class="page-scroll" href="/creative/">Карта Креатива</a></li>
+                    </ul>
                 </li>
+
                 <li class="dropdown">
                     <a aria-expanded="false" role="button" data-toggle="dropdown" class="dropdown-toggle"
                        href="/library/">новости <span class="caret"></span></a>
                     <ul role="menu" class="dropdown-menu">
+                        <li><a href="/library/survival-update-1181/" class="page-scroll"><span class="badge badge-pill badge-success">31-дек-21</span> Мир Выживания обновлён до версии 1.18.1</a></li>
+                        <li><a href="/library/vanilla-update-118/" class="page-scroll"><span class="badge badge-pill badge-success">5-дек-21</span> Ванильный сервер обновлён до версии 1.18</a></li>
                         <li><a href="/library/mob-update-1171/" class="page-scroll"><span class="badge badge-pill badge-success">8-авг-21</span> Обновление сервера до версии 1.17.1</a></li>
                         <li><a href="/library/mob-newyear-2021/" class="page-scroll"><span class="badge badge-pill badge-success">1-янв-21</span> Поздравляем всех с Новым 2021 годом!</a></li>
                         <li class="divider"></li>
