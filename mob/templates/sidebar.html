@@ -1,6 +1,38 @@
                 {% block sidebar %}
 
                 <!-- Side Widget Well -->
+<div style="max-width: 350px;margin: 15px auto;padding: 20px;border: 1px solid #555;border-radius:8px;text-align:center;background: #393f46;">
+  <h3 style="margin-bottom:0px;"><a href="/funding/">Хостинг сервера</a></h3>
+  <div id="days-timer" style="font-size:2.5em;font-weight:bold;color:#2a7ae2;margin-bottom:8px;">--</div>
+  <div style="font-size:1em;">
+    <span>Дата завершения подписки: </span>
+    <span id="timer-date" style="font-weight:bold;color: white;">17 января 2027 г.</span>
+  </div>
+</div>
+
+<script>
+  var endDate = new Date(2027, 0, 17); // Январь = 0
+
+  function getDayWord(n) {
+    n = Math.abs(n) % 100;
+    var n1 = n % 10;
+    if (n > 10 && n < 20) return 'дней';
+    if (n1 > 1 && n1 < 5) return 'дня';
+    if (n1 == 1) return 'день';
+    return 'дней';
+  }
+
+  function updateDaysTimer() {
+    var now = new Date();
+    var diff = endDate - now;
+    var days = Math.ceil(diff / (1000 * 60 * 60 * 24));
+    days = days > 0 ? days : 0;
+    document.getElementById('days-timer').textContent = days + ' ' + getDayWord(days);
+  }
+  updateDaysTimer();
+  setInterval(updateDaysTimer, 60 * 1000); // обновлять каждую минуту
+</script>
+
                 <div class="well">
                     <h4>Хотите помочь проекту?</h4>
                     <p>Мы некоммерческий проект и находимся на самофинансировании. Если вам нравится играть с нами и вы согласны с нашими целями&nbsp;&mdash; поддержите проект, <a href="/funding/" class="text-info">перечислив любую сумму</a> любым доступным способом. Содержание сервера стоит хороших денег и я плачу за него из личного кошелька.</p>
