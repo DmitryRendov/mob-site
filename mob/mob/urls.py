@@ -17,6 +17,8 @@ from django.conf.urls import url, include
 from django.contrib import admin
 from django.contrib.flatpages import views
 
+app_name = 'mob' 
+
 urlpatterns = [
     url(r'^', include('landpage.urls', namespace='landpage')),
     url(r'^library/', include('library.urls', namespace='library')),

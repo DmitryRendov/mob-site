@@ -3,6 +3,8 @@
 from django.conf.urls import url
 from library import views
 
+app_name = 'mob'
+
 urlpatterns = [
     url(
         regex=r'^$',

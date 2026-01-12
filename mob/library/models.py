@@ -3,8 +3,7 @@ from __future__ import unicode_literals
 
 from django.db import models
 from django.utils.translation import ugettext_lazy as _
-from django.db.models import permalink
-from django.core.urlresolvers import reverse
+from django.urls import reverse
 from django.contrib.auth.models import User
 from django.conf import settings
 
@@ -25,9 +24,8 @@ class Category(models.Model):
     def __unicode__(self):
         return u'%s' % self.title
 
-    @permalink
     def get_absolute_url(self):
-        return ('library_category_detail', None, {'slug': self.slug})
+        return reverse('library_category_detail', kwargs={'slug': self.slug})
 
 
 class Article(models.Model):
@@ -38,7 +36,7 @@ class Article(models.Model):
     )
     title = models.CharField(_('title'), max_length=200)
     slug = models.SlugField(_('slug'), unique_for_date='publish')
-    author = models.ForeignKey(User, blank=True, null=True)
+    author = models.ForeignKey(User, on_delete=models.CASCADE, blank=True, null=True)
     body = models.TextField(_('body'), )
     intro = models.TextField(_('intro'), blank=True, help_text=_('Inroduction text'))
     status = models.IntegerField(_('status'), choices=STATUSES, default=2)

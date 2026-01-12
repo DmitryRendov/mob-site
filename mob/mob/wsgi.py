@@ -18,9 +18,9 @@ os.environ.setdefault("DJANGO_SETTINGS_MODULE", "mob.settings")
 
 try:
     application = get_wsgi_application()
-    print 'WSGI without exception'
+    sys.stderr.write('WSGI without exception')
 except Exception:
-    print 'handling WSGI exception'
+    sys.stderr.write('handling WSGI exception')
     # Error loading applications
     if 'mod_wsgi' in sys.modules:
         traceback.print_exc()
