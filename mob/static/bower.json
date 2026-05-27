@@ -1,9 +1,9 @@
 {
   "name": "minecraft.of.by",
-  "version": "1.0.1",
+  "version": "2.0.0",
   "description": "minecraft.of.by project",
   "authors": [
-    "Dmitry Vl. Rendov"
+    "Dmitry Rendov"
   ],
   "license": "MIT",
   "private": true,
