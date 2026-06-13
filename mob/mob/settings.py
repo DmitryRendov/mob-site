@@ -32,7 +32,7 @@ SECRET_KEY = 'o5j^lkf9em1&0y&ml@%*ne^j8ir*itwk-kgxu*1-fmc^7iaxsv'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["minecraft.of.by", "xn--80ashg.xn--90ais", "127.0.0.1"]
 
 SITE_ID = 1
 
