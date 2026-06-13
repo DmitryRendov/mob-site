@@ -4,7 +4,7 @@
 django-debug-toolbar==1.5
 
 html5lib
-six==1.10.0
+six==1.17.0
 django-treebeard==4.0.1
 
 # Optional, recommended packages

@@ -13,10 +13,11 @@ https://docs.djangoproject.com/en/1.10/ref/settings/
 
 import os
 import sys
+from importlib import reload
 from django.utils.translation import ugettext_lazy as _
 
 reload(sys)
-sys.setdefaultencoding('utf8')
+#sys.setdefaultencoding('utf8')
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -93,7 +94,7 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'mob_site',
-        'USER': 'django',
+        'USER': 'mob_user',
         'PASSWORD': '111',
         'HOST': '127.0.0.1',    }
 }
@@ -135,7 +136,7 @@ LOCALE_PATHS = [
     os.path.join(BASE_DIR, 'locale'),
 ]
 
-TIME_ZONE = 'Europe/Minsk'
+TIME_ZONE = 'Europe/Warsaw'
 
 USE_I18N = True
 
