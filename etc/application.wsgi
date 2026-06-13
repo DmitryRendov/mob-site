@@ -20,8 +20,8 @@ import signal
 import sys
 from django.core.wsgi import get_wsgi_application
 
-sys.path.append('/home/dmitry/mob-site/python-bin/lib/python3.12/site-packages/django')
-sys.path.append('/home/dmitry/mob-site/mob/')
+sys.path.append('/home/drendov/vhosts/minecraft.of.by/python-bin/lib/python3.12/site-packages/django')
+sys.path.append('/home/drendov/vhosts/minecraft.of.by/public_html/mob/')
 os.environ['DJANGO_SETTINGS_MODULE'] = 'mob.settings'
 
 try:
