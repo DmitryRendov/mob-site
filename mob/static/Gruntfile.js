@@ -1,7 +1,7 @@
 /*
  * Gruntfile.js
  *
- * Copyright (c) 2016-2018 Dmitry Vl. Rendov
+ * Copyright (c) 2016-2026 Dmitry Vl. Rendov
  * Licensed under the MIT license.
  * https://github.com/DmitryRendov/mob-site/blob/master/LICENSE
  */

@@ -1,7 +1,7 @@
 # MOB-site UI #
 ## Prerequires ##
 
-- modejs >= 6.x
+- modejs >= 9.x
 - grunt-cli
 - bower
 
@@ -27,5 +27,5 @@ Create packed UI site components, copying files.
 grunt
 ```
 
-Open the site in browser to http://dev.minecraft.of.by
+Open the site in browser to http://minecraft.of.by
 
