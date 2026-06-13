@@ -1,32 +1,25 @@
 {
   "name": "minecraft-of-by",
-  "version": "1.0.1",
+  "version": "2.0.0",
   "description": "UI theme for minecraft.of.by project",
-  "main": "package.json",
+  "type": "module",
   "scripts": {
-    "test": "grunt test"
+    "dev": "vite",
+    "build": "vite build && cp src/js/ga.js js/ga.js",
+    "preview": "vite preview"
   },
   "repository": {
     "type": "git",
     "url": "git://github.com/DmitryRendov/mob-site.git"
   },
   "author": "Dmitry Vl. Rendov",
-  "license": {
-    "type": "MIT",
-    "url": "https://github.com/DmitryRendov/mob-site/blob/master/LICENSE"
-  },
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/DmitryRendov/mob-site/issues"
   },
   "homepage": "https://minecraft.of.by/",
   "devDependencies": {
-    "grunt": "latest",
-    "grunt-contrib-clean": "latest",
-    "grunt-contrib-concat": "latest",
-    "grunt-contrib-copy": "latest",
-    "grunt-contrib-jshint": "latest",
-    "grunt-contrib-less": "latest",
-    "grunt-contrib-uglify": "latest",
-    "grunt-contrib-watch": "^0.4.4"
+    "less": "^4.6.4",
+    "vite": "^5.4.21"
   }
 }
