@@ -69,18 +69,15 @@ pids
 *.pid
 *.seed
 
-# Grunt intermediate storage (http://gruntjs.com/creating-plugins#storing-task-files)
-.grunt
-
 # Dependency directory
 node_modules
 libraries
 components
 
 # Production files
-mob/static/js/
-mob/static/css/
-mob/static/fonts/
+mob/static/js/app.min.js
+mob/static/js/ga.js
+mob/static/css/styles.min.css
 mob/static/index.html
 mob/accounts/
 

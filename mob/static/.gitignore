@@ -1,9 +1,7 @@
 admin/
-js/
+js/app.min.js
 !src/*
-css/
-fonts/
-cms/
+css/styles.min.css
 djangocms_admin_style/
 bower_components/
 node_modules/
