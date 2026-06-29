@@ -20,17 +20,45 @@ $(function() {
 
 
     var containerEl = document.querySelector('.mob-projects');
-    var mixer = mixitup(containerEl, {
-            classNames: {
-                block: 'mob-projects',
-                elementFilter: 'controls',
-            },
-            load: {
-                sort: 'published-date:desc'
-            },
-            animation: {
-                effects: 'fade translateZ(-100px)'
-            }
-        });
+    if (containerEl) {
+        var mixer = mixitup(containerEl, {
+                classNames: {
+                    block: 'mob-projects',
+                    elementFilter: 'controls',
+                },
+                load: {
+                    sort: 'published-date:desc'
+                },
+                animation: {
+                    effects: 'fade translateZ(-100px)'
+                }
+            });
+    }
+
+    // cookies consent
+    if (!sessionStorage.getItem('cookieConsentGDPR')) {
+        $('#cookieConsentGDPR').show();
+    }
+
+    $('#cookieConsentNecessary').on('click', function() {
+        sessionStorage.setItem('cookieConsentGDPR', JSON.stringify({necessary: true, analytics: false, marketing: false}));
+        $('#cookieConsentGDPR').alert('close');
+    });
+
+    $('#cookieConsentAcceptAll').on('click', function() {
+        sessionStorage.setItem('cookieConsentGDPR', JSON.stringify({necessary: true, analytics: true, marketing: true}));
+        $('#cookieConsentGDPR').alert('close');
+    });
+
+    $('#cookieConsentSettings').on('click', function() {
+        $('#cookieSettingsModal').modal('show');
+    });
+
+    $('#saveCookieSettings').on('click', function() {
+        var analytics = $('#analyticsCookies').is(':checked');
+        var marketing = $('#marketingCookies').is(':checked');
+        sessionStorage.setItem('cookieConsentGDPR', JSON.stringify({necessary: true, analytics: analytics, marketing: marketing}));
+        $('#cookieConsentGDPR').alert('close');
+    });
 
 }); 
