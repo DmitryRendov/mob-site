@@ -96,8 +96,8 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'mob_site',
         'USER': 'mob_user',
-        'PASSWORD': '111',
-        'HOST': '127.0.0.1',    }
+        'PASSWORD': config('DB_PASSWORD'),
+        'HOST': 'localhost',    }
 }
 
 
