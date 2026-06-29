@@ -14,6 +14,7 @@ https://docs.djangoproject.com/en/1.10/ref/settings/
 import os
 import sys
 from importlib import reload
+from decouple import config
 from django.utils.translation import ugettext_lazy as _
 
 reload(sys)
@@ -27,7 +28,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/1.10/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'o5j^lkf9em1&0y&ml@%*ne^j8ir*itwk-kgxu*1-fmc^7iaxsv'
+SECRET_KEY = config('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True

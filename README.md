@@ -80,6 +80,26 @@ pip3 install -r requirements/development.txt
 
 ### Configure project ###
 
+Create a local environment file and set `SECRET_KEY`:
+
+```bash
+cp .env.example .env
+```
+
+Edit `.env` and set a secure value:
+
+```bash
+SECRET_KEY='<YOUR_DJANGO_SECRET_KEY>'
+```
+
+`python-decouple` reads this value automatically from `.env`.
+
+You can generate a random key, for example:
+
+```bash
+python3 -c "from django.core.management.utils import get_random_secret_key;print(get_random_secret_key())"
+```
+
 ### Sync database ###
 ```bash
 python3 manage.py migrate

@@ -57,6 +57,11 @@ target/
 # Virtualenv
 python-bin/
 
+# Local environment variables
+.env
+.env.*
+!.env.example
+
 # django admin
 /mob/static/admin/
 
