@@ -64,35 +64,6 @@
 
 <script src="/static/js/app.min.js"></script>
 <script src="/static/js/ga.js"></script>
-<script>
-(function() {
-  // Проверяем, был ли уже принят cookies consent в этой сессии
-  if (!sessionStorage.getItem('cookieConsentGDPR')) {
-    $('#cookieConsentGDPR').show();
-  }
-
-  $('#cookieConsentNecessary').on('click', function() {
-    sessionStorage.setItem('cookieConsentGDPR', JSON.stringify({necessary: true, analytics: false, marketing: false}));
-    $('#cookieConsentGDPR').alert('close');
-  });
-
-  $('#cookieConsentAcceptAll').on('click', function() {
-    sessionStorage.setItem('cookieConsentGDPR', JSON.stringify({necessary: true, analytics: true, marketing: true}));
-    $('#cookieConsentGDPR').alert('close');
-  });
-
-  $('#cookieConsentSettings').on('click', function() {
-    $('#cookieSettingsModal').modal('show');
-  });
-
-  $('#saveCookieSettings').on('click', function() {
-    var analytics = $('#analyticsCookies').is(':checked');
-    var marketing = $('#marketingCookies').is(':checked');
-    sessionStorage.setItem('cookieConsentGDPR', JSON.stringify({necessary: true, analytics: analytics, marketing: marketing}));
-    $('#cookieConsentGDPR').alert('close');
-  });
-})();
-</script>
 
 </body>
 </html>
