@@ -100,6 +100,32 @@ You can generate a random key, for example:
 python3 -c "from django.core.management.utils import get_random_secret_key;print(get_random_secret_key())"
 ```
 
+#### DEBUG and custom error pages ####
+
+`DEBUG` is also controlled via `.env`:
+
+| Environment | `.env` setting | Effect |
+|-------------|----------------|--------|
+| Development | `DEBUG=True`   | Django shows detailed debug error pages |
+| Production  | `DEBUG=False` (or omit) | Django uses custom error templates |
+
+**Development** — add to `.env`:
+```
+DEBUG=True
+```
+
+**Production** — omit `DEBUG` from `.env` (defaults to `False`), or set explicitly:
+```
+DEBUG=False
+```
+
+When `DEBUG=False` Django renders the custom templates from `mob/templates/`:
+- `403.html` — permission denied
+- `404.html` — page not found
+- `500.html` — server error
+
+Apache also serves the corresponding pages from `mob/static/` directly for errors it handles itself (e.g. static file not found, WSGI process crash) via `ErrorDocument` directives in `etc/minecraft.of.by.conf`.
+
 ### Sync database ###
 ```bash
 python3 manage.py migrate
